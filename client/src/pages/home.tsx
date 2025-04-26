@@ -39,9 +39,9 @@ export default function Home() {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <img 
-                src="/attached_assets/WhatsApp Image 2025-04-26 at 13.21.58_abe628d5.jpg"
-                alt="Healthcare professional with laptop" 
-                className="rounded-lg shadow-xl w-full max-w-md"
+                src="/attached_assets/WhatsApp-Image-2025-04-25-at-8-38-38-PM-1.jpg"
+                alt="Healthcare professional at desk" 
+                className="rounded-lg shadow-xl w-full max-w-md object-cover"
               />
             </div>
           </div>
