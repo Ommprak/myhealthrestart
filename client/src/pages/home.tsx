@@ -6,11 +6,40 @@ import FeatureCard from "@/components/ui/feature-card";
 import { features } from "@/data/features";
 import { testimonials } from "@/data/testimonials";
 import ContactPopup from "@/components/ui/contact-popup";
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
   const featuredTestimonial = testimonials[0];
-  
+  const featuresRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-on-scroll');
+        } else {
+          entry.target.classList.remove('animate-on-scroll');
+        }
+      });
+    });
+
+    if (featuresRef.current) {
+      featuresRef.current.querySelectorAll('.scroll-reveal').forEach(element => {
+        observer.observe(element);
+      });
+    }
+
+    return () => {
+      if (featuresRef.current) {
+        featuresRef.current.querySelectorAll('.scroll-reveal').forEach(element => {
+          observer.unobserve(element);
+        });
+      }
+    };
+  }, []);
+
+
   return (
     <div>
       <ContactPopup />
@@ -49,20 +78,20 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-slate-800">
+      <section className="py-16 bg-white dark:bg-slate-800" ref={featuresRef}>
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
               Why Choose <span className="text-secondary">My Health Restart</span>?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto animate-slideUp">
+            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto scroll-reveal">
               We are committed to providing the highest quality healthcare products with exceptional service.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={feature.id} className="animate-slideUp" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div key={feature.id} className="scroll-reveal" style={{ '--delay': `${index * 0.2}s` }}>
                 <FeatureCard feature={feature} />
               </div>
             ))}

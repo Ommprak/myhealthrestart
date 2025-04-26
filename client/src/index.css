@@ -117,9 +117,16 @@
   animation: fadeIn 1s ease-out;
 }
 
-.animate-slideUp {
-  animation: slideUp 0.8s ease-out forwards;
+.scroll-reveal {
   opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: var(--delay, 0s);
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .animate-swing {
