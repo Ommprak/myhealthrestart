@@ -53,7 +53,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
-              Why Choose My Health <span className="text-secondary">Restart</span>?
+              Why Choose <span className="text-secondary">My Health Restart</span>?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto animate-slideUp">
               We are committed to providing the highest quality healthcare products with exceptional service.
