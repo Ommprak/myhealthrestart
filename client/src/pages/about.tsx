@@ -1,0 +1,232 @@
+import PageHeader from "@/components/layout/page-header";
+import FeatureCard from "@/components/ui/feature-card";
+import { values } from "@/data/features";
+import { team } from "@/data/team";
+import { Button } from "@/components/ui/button";
+
+export default function About() {
+  return (
+    <div>
+      <PageHeader 
+        title="About MediCarePlus" 
+        subtitle="Dedicated to advancing healthcare through innovative, high-quality products."
+      />
+
+      {/* Our Story Section */}
+      <section className="py-16 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center">
+            <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
+              <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-6">
+                Our Story
+              </h2>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                Founded in 1998 by Dr. James Carter, MediCarePlus began with a simple mission: to create healthcare products that truly make a difference in people's lives.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                What started as a small research lab has grown into a global healthcare company trusted by medical professionals and patients in over 45 countries.
+              </p>
+              <p className="text-slate-600 dark:text-slate-300 mb-4">
+                Our dedication to scientific research, quality manufacturing, and customer satisfaction has established us as a leader in the healthcare industry.
+              </p>
+              <div className="flex items-center mt-8">
+                <div className="flex flex-col items-center mr-8">
+                  <span className="text-primary dark:text-primary-light font-bold text-3xl">25+</span>
+                  <span className="text-slate-500 dark:text-slate-400 text-sm">Years Experience</span>
+                </div>
+                <div className="flex flex-col items-center mr-8">
+                  <span className="text-primary dark:text-primary-light font-bold text-3xl">45+</span>
+                  <span className="text-slate-500 dark:text-slate-400 text-sm">Countries</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <span className="text-primary dark:text-primary-light font-bold text-3xl">100+</span>
+                  <span className="text-slate-500 dark:text-slate-400 text-sm">Products</span>
+                </div>
+              </div>
+            </div>
+            <div className="md:w-1/2">
+              <img 
+                src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=450&q=80"
+                alt="MediCarePlus Headquarters" 
+                className="rounded-lg shadow-xl w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="py-16 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
+              Our Values
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              At MediCarePlus, we are guided by a set of core values that influence every decision we make.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {values.map(value => (
+              <FeatureCard key={value.id} feature={value} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="py-16 bg-white dark:bg-slate-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
+              Our Leadership Team
+            </h2>
+            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+              Meet the experienced professionals guiding MediCarePlus into the future.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {team.map(member => (
+              <div key={member.id} className="text-center">
+                <div className="mb-4 relative inline-block">
+                  <img 
+                    src={member.image}
+                    alt={member.name} 
+                    className="w-32 h-32 rounded-full object-cover border-4 border-white dark:border-slate-700 shadow-md"
+                  />
+                </div>
+                <h3 className="font-heading font-semibold text-xl text-slate-800 dark:text-white">
+                  {member.name}
+                </h3>
+                <p className="text-primary dark:text-primary-light mb-2">
+                  {member.title}
+                </p>
+                <p className="text-slate-600 dark:text-slate-300 text-sm">
+                  {member.bio}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-6">
+                  Get in Touch
+                </h2>
+                <p className="text-slate-600 dark:text-slate-300 mb-8">
+                  Have questions about our products or company? Our team is here to help.
+                </p>
+                <div className="space-y-6">
+                  <div className="flex items-start">
+                    <div className="text-primary dark:text-primary-light text-xl mt-1 mr-4">
+                      <i className="ri-map-pin-line"></i>
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-medium text-lg text-slate-800 dark:text-white mb-1">
+                        Headquarters
+                      </h3>
+                      <p className="text-slate-600 dark:text-slate-300">
+                        123 Medical Plaza, Suite 500<br />
+                        San Francisco, CA 94107
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="text-primary dark:text-primary-light text-xl mt-1 mr-4">
+                      <i className="ri-phone-line"></i>
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-medium text-lg text-slate-800 dark:text-white mb-1">
+                        Phone
+                      </h3>
+                      <p className="text-slate-600 dark:text-slate-300">
+                        +1 (800) 555-1234<br />
+                        Monday-Friday, 8am-6pm PST
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start">
+                    <div className="text-primary dark:text-primary-light text-xl mt-1 mr-4">
+                      <i className="ri-mail-line"></i>
+                    </div>
+                    <div>
+                      <h3 className="font-heading font-medium text-lg text-slate-800 dark:text-white mb-1">
+                        Email
+                      </h3>
+                      <p className="text-slate-600 dark:text-slate-300">
+                        info@medicareplus.com<br />
+                        support@medicareplus.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-md">
+                <h3 className="font-heading font-semibold text-xl text-slate-800 dark:text-white mb-6">
+                  Send us a Message
+                </h3>
+                <form>
+                  <div className="mb-4">
+                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                      Name
+                    </label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                      Email
+                    </label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                    />
+                  </div>
+                  <div className="mb-4">
+                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                      Subject
+                    </label>
+                    <select 
+                      id="subject" 
+                      className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                    >
+                      <option>Product Information</option>
+                      <option>Order Inquiry</option>
+                      <option>Partnership Opportunity</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div className="mb-6">
+                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
+                      Message
+                    </label>
+                    <textarea 
+                      id="message" 
+                      rows={4} 
+                      className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                    ></textarea>
+                  </div>
+                  <Button type="submit" className="w-full">
+                    Send Message
+                  </Button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
