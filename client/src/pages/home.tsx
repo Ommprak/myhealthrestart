@@ -20,7 +20,7 @@ export default function Home() {
           <img 
             src="https://res.cloudinary.com/df8blxifj/image/upload/f_auto,q_auto/l518gz0vzolkj3g2bb0s"
             alt="Healthcare background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover animate-fadeIn"
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
@@ -53,16 +53,18 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
-              Why Choose MediCare<span className="text-secondary">Plus</span>?
+              Why Choose My Health <span className="text-secondary">Restart</span>?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto animate-slideUp">
               We are committed to providing the highest quality healthcare products with exceptional service.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map(feature => (
-              <FeatureCard key={feature.id} feature={feature} />
+            {features.map((feature, index) => (
+              <div key={feature.id} className="animate-slideUp" style={{ animationDelay: `${index * 0.2}s` }}>
+                <FeatureCard feature={feature} />
+              </div>
             ))}
           </div>
         </div>
