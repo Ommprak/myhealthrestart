@@ -16,12 +16,3 @@ export interface Product {
 }
 
 export const products: Product[] = [];
-
-export const productCategories = [
-  "All Products",
-  "Supplements",
-  "Pain Relief",
-  "Cardiac Care",
-  "Digestive Health",
-  "Respiratory Care",
-];

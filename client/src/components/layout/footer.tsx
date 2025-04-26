@@ -88,41 +88,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div>
-            <h3 className="font-heading font-semibold text-lg text-white mb-6">Product Categories</h3>
-            <ul className="space-y-3">
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-primary-light transition-colors">
-                  Supplements
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-primary-light transition-colors">
-                  Pain Relief
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-primary-light transition-colors">
-                  Cardiac Care
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-primary-light transition-colors">
-                  Digestive Health
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-primary-light transition-colors">
-                  Respiratory Care
-                </Link>
-              </li>
-              <li>
-                <Link href="/products" className="text-slate-300 hover:text-primary-light transition-colors">
-                  View All Categories
-                </Link>
-              </li>
-            </ul>
-          </div>
+          
 
           <div>
             <h3 className="font-heading font-semibold text-lg text-white mb-6">Contact Information</h3>
