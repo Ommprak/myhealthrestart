@@ -54,13 +54,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 }
               ></i>
             ))}
-            <span className="text-slate-600 dark:text-slate-300 ml-1">
-              ({product.reviewCount})
-            </span>
           </div>
-          <span className="text-slate-900 dark:text-white font-bold">
-            {formatPrice(product.price)}
-          </span>
         </div>
       </div>
     </div>
