@@ -33,7 +33,7 @@ export default function Home() {
             <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8">
               Advanced Healthcare Solutions
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-start">
               <Link href="/products">
                 <Button className="px-6 py-3 shadow-md hover:shadow-lg bg-primary-light hover:bg-primary text-white">
                   Explore Products <i className="ri-arrow-right-line ml-2"></i>
