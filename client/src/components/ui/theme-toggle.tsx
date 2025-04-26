@@ -14,9 +14,9 @@ export function ThemeToggle() {
       aria-label="Toggle theme"
     >
       {isDark ? (
-        <i className="ri-moon-line text-xl text-slate-300 transition-transform duration-200 rotate-0" aria-hidden="true"></i>
+        <i className="ri-moon-line text-xl text-slate-300 transition-all duration-300 transform hover:scale-110" aria-hidden="true"></i>
       ) : (
-        <i className="ri-sun-line text-xl text-yellow-500 transition-transform duration-200 rotate-0 hover:rotate-90" aria-hidden="true"></i>
+        <i className="ri-sun-line text-xl text-yellow-500 transition-all duration-300 transform hover:scale-110 hover:rotate-45" aria-hidden="true"></i>
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
