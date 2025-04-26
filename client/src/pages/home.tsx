@@ -27,7 +27,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-              Phytoscience presents <span className="text-primary-light">My Health Restart</span>
+              PhytoScience presents
             </h1>
             <p className="text-xl text-white/90 mb-8">
               Advanced Healthcare Solutions
