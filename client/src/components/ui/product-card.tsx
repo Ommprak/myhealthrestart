@@ -2,56 +2,54 @@ import { Product } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { formatPrice } from "@/lib/utils";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { useState } from 'react';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const [isImageOpen, setIsImageOpen] = useState(false);
+
   return (
-    <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-slate-200 dark:border-slate-700">
-      <div className="relative">
-        <Dialog>
-          <DialogTrigger asChild>
-            <img 
-              src={product.image} 
-              alt={product.name} 
-              className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
-            />
-          </DialogTrigger>
-          <DialogContent className="max-w-3xl p-0">
-            <img 
-              src={product.image} 
-              alt={product.name} 
-              className="w-full max-h-[80vh] object-contain"
-            />
-          </DialogContent>
-        </Dialog>
-        {product.badge && (
-          <span className={`absolute top-2 right-2 bg-${product.badge.color} text-white text-xs font-bold px-2 py-1 rounded`}>
-            {product.badge.text}
-          </span>
-        )}
+    <div className="group relative w-full rounded-lg border p-2">
+      <div className="relative w-full pb-[100%]">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="absolute inset-0 h-full w-full object-contain cursor-pointer rounded-lg hover:scale-105 transition-transform"
+          onClick={() => setIsImageOpen(true)}
+        />
       </div>
-      <div className="p-4">
-        <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-          {product.name}
-        </h3>
-        <p className="text-slate-600 dark:text-slate-300 text-sm mb-3 line-clamp-2">
-          {product.description}
-        </p>
-        <div className="flex justify-between items-center mb-3">
-          <div className="text-yellow-400 flex text-sm">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <i 
-                key={i} 
-                className={
-                  i < Math.floor(product.rating) 
-                    ? "ri-star-fill" 
-                    : i < product.rating 
-                      ? "ri-star-half-fill" 
-                      : "ri-star-line"
-                }
+      {isImageOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setIsImageOpen(false)}
+        >
+          <img
+            src={product.image}
+            alt={product.name}
+            className="max-h-[90vh] max-w-[90vw] object-contain"
+          />
+        </div>
+      )}
+      <div className="mt-4 flex flex-col gap-2">
+        <div>
+          <h3 className="text-sm text-gray-700 dark:text-gray-200">
+            {product.name}
+          </h3>
+          <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+            {product.description}
+          </p>
+        </div>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            {[...Array(5)].map((_, i) => (
+              <i
+                key={i}
+                className={`ri-star-${
+                  i < product.rating ? "fill" : "line"
+                } text-yellow-400 text-sm`}
               ></i>
             ))}
           </div>
