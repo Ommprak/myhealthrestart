@@ -16,7 +16,7 @@ export default function Home() {
     <div>
       <ContactPopup />
       {/* Hero Section */}
-      <section className="relative min-h-[600px] flex items-center">
+      <section className="relative min-h-[800px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://res.cloudinary.com/df8blxifj/image/upload/f_auto,q_auto/l518gz0vzolkj3g2bb0s"
