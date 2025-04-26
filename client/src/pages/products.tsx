@@ -32,8 +32,14 @@ export default function Products() {
         <div className="container mx-auto px-4">
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {displayedProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
+            {displayedProducts.map((product, index) => (
+              <div
+                key={product.id}
+                className="animate-fadeIn"
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
+                <ProductCard product={product} />
+              </div>
             ))}
           </div>
 
