@@ -48,8 +48,16 @@ export default function Home() {
       <section className="py-16 bg-white dark:bg-slate-800 scroll-reveal">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0.2s' }}>
-            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4 animate-fadeIn">
-              Why Choose <span className="text-secondary animate-pulse">My Health Restart</span>?
+            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4 animate-text-reveal">
+              {'Why Choose '.split('').map((char, i) => (
+                <span key={i} style={{ animationDelay: `${i * 0.05}s` }}>{char}</span>
+              ))}
+              <span className="text-secondary">
+                {'My Health Restart'.split('').map((char, i) => (
+                  <span key={i + 11} style={{ animationDelay: `${(i + 11) * 0.05}s` }}>{char}</span>
+                ))}
+              </span>
+              <span style={{ animationDelay: '1.3s' }}>?</span>
             </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto animate-slideUp">
               We are committed to providing the highest quality healthcare products with exceptional service.
