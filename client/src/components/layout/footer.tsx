@@ -12,7 +12,7 @@ export default function Footer() {
               </div>
               <div>
                 <span className="font-heading font-bold text-xl text-white">
-                  MediCare<span className="text-secondary-light">Plus</span>
+                  Medi<span className="text-secondary-light">Care</span>Plus
                 </span>
               </div>
             </div>
