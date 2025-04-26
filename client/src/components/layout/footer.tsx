@@ -7,14 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-2 mb-6">
-              <div className="text-primary-light text-3xl">
-                <i className="ri-heart-pulse-fill"></i>
-              </div>
-              <div>
-                <span className="font-heading font-bold text-xl text-white">
-                  Medi<span className="text-secondary-light">Care</span>Plus
-                </span>
-              </div>
+              <img 
+                src="https://res.cloudinary.com/df8blxifj/image/upload/v1745658047/hqb4keyjnhrajibm0k6c.png" 
+                alt="MyHealth Restart Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-slate-300 mb-6">
               Providing premium quality medicines and healthcare products for over 25 years. 
