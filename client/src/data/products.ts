@@ -22,7 +22,47 @@ export const products: Product[] = [
     name: "",
     description: "",
     price: 0,
-    image: "https://i.im.ge/2025/04/27/vU1bXz.IMG-20250421-WA0036.jpeg",
+    image: "https://i.im.ge/2025/04/27/vU1UA1.IMG-20250421-WA0022.jpeg",
+    category: "Supplements",
+    rating: 0,
+    reviewCount: 0
+  },
+  {
+    id: 2,
+    name: "",
+    description: "",
+    price: 0,
+    image: "https://i.im.ge/2025/04/27/vU101m.IMG-20250421-WA0024.jpeg",
+    category: "Supplements",
+    rating: 0,
+    reviewCount: 0
+  },
+  {
+    id: 3,
+    name: "",
+    description: "",
+    price: 0,
+    image: "https://i.im.ge/2025/04/27/vUOemS.IMG-20250421-WA0009.jpeg",
+    category: "Supplements",
+    rating: 0,
+    reviewCount: 0
+  },
+  {
+    id: 4,
+    name: "",
+    description: "",
+    price: 0,
+    image: "https://i.im.ge/2025/04/27/vU1yAx.IMG-20250421-WA0031.jpeg",
+    category: "Supplements",
+    rating: 0,
+    reviewCount: 0
+  },
+  {
+    id: 5,
+    name: "",
+    description: "",
+    price: 0,
+    image: "https://i.im.ge/2025/04/27/vU16bc.IMG-20250421-WA0028.jpeg",
     category: "Supplements",
     rating: 0,
     reviewCount: 0
