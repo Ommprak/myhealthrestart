@@ -13,36 +13,35 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-primary/10 to-white dark:from-primary-dark/20 dark:to-slate-900 py-16 md:py-24">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-10 md:mb-0">
-              <h1 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-slate-800 dark:text-white mb-4">
-                Advanced Healthcare <span className="text-primary dark:text-primary-light">Solutions</span>
-              </h1>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
-                Providing premium quality medicines and healthcare products for over 25 years.
-                Trusted by healthcare professionals worldwide.
-              </p>
-              <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Link href="/products">
-                  <Button className="px-6 py-3 shadow-md hover:shadow-lg">
-                    Explore Products <i className="ri-arrow-right-line ml-2"></i>
-                  </Button>
-                </Link>
-                <Link href="/about">
-                  <Button variant="outline" className="px-6 py-3">
-                    Learn More
-                  </Button>
-                </Link>
-              </div>
-            </div>
-            <div className="md:w-1/2 flex justify-center">
-              <img 
-                src="https://res.cloudinary.com/df8blxifj/image/upload/f_auto,q_auto/l518gz0vzolkj3g2bb0s"
-                alt="Healthcare professional at work" 
-                className="rounded-lg shadow-xl w-full max-w-md object-cover"
-              />
+      <section className="relative min-h-[600px] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://res.cloudinary.com/df8blxifj/image/upload/f_auto,q_auto/l518gz0vzolkj3g2bb0s"
+            alt="Healthcare background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-2xl">
+            <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+              Advanced Healthcare <span className="text-primary-light">Solutions</span>
+            </h1>
+            <p className="text-xl text-white/90 mb-8">
+              Providing premium quality medicines and healthcare products for over 25 years.
+              Trusted by healthcare professionals worldwide.
+            </p>
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <Link href="/products">
+                <Button className="px-6 py-3 shadow-md hover:shadow-lg bg-primary-light hover:bg-primary text-white">
+                  Explore Products <i className="ri-arrow-right-line ml-2"></i>
+                </Button>
+              </Link>
+              <Link href="/about">
+                <Button variant="outline" className="px-6 py-3 border-white text-white hover:bg-white/10">
+                  Learn More
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
