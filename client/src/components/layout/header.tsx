@@ -21,7 +21,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img 
-              src="/attached_assets/myhealth-restart-logo.png" 
+              src="https://res.cloudinary.com/df8blxifj/image/upload/v1745655586/xrqzkjagzlqqtwoepxig.jpg" 
               alt="MyHealth Restart Logo" 
               className="h-8 w-auto"
             />

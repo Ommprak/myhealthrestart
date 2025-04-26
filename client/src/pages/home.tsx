@@ -9,6 +9,10 @@ import { testimonials } from "@/data/testimonials";
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
   const featuredTestimonial = testimonials[0];
+  
+  return (
+    <div>
+      <ContactPopup />
 
   return (
     <div>
