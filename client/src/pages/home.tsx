@@ -45,11 +45,11 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-slate-800">
+      <section className="py-16 bg-white dark:bg-slate-800 scroll-reveal">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
-              Why Choose <span className="text-secondary">My Health Restart</span>?
+          <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0.2s' }}>
+            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4 animate-fadeIn">
+              Why Choose <span className="text-secondary animate-pulse">My Health Restart</span>?
             </h2>
             <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto animate-slideUp">
               We are committed to providing the highest quality healthcare products with exceptional service.
@@ -58,7 +58,11 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div key={feature.id} className="animate-slideUp" style={{ animationDelay: `${index * 0.2}s` }}>
+              <div 
+                key={feature.id} 
+                className="scroll-reveal animate-slideUp transform transition-all duration-500 hover:scale-105" 
+                style={{ animationDelay: `${index * 0.2}s` }}
+              >
                 <FeatureCard feature={feature} />
               </div>
             ))}
