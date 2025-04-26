@@ -45,8 +45,16 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-slate-800 scroll-reveal">
-        <div className="container mx-auto px-4">
+      <section className="py-16 bg-white dark:bg-slate-800 scroll-reveal relative overflow-hidden">
+        <div className="absolute inset-0 w-full h-full opacity-30">
+          <iframe
+            src='https://my.spline.design/dnaparticles-NfgxjQUyTMOMXqa5FHj1G8pV/'
+            frameBorder='0'
+            width='100%'
+            height='100%'
+          ></iframe>
+        </div>
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0.2s' }}>
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4 animate-text-reveal">
               {'Why Choose '.split('').map((char, i) => (
