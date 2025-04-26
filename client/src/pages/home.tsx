@@ -19,7 +19,7 @@ export default function Home() {
       <section className="relative min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://assets.cloudinary.com/dbdnjaewg/61e17498e86bdfa05627659ef539b05e"
+            src="https://res.cloudinary.com/dbdnjaewg/image/upload/61e17498e86bdfa05627659ef539b05e"
             alt="Healthcare background" 
             className="w-full h-full object-cover animate-fadeIn"
           />
