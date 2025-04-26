@@ -45,21 +45,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-slate-800 scroll-reveal">
+      <section className="py-16 bg-white dark:bg-slate-800 scroll-reveal-section relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0.2s' }}>
-            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4 animate-text-reveal">
-              {'Why Choose '.split('').map((char, i) => (
-                <span key={i} style={{ animationDelay: `${i * 0.05}s` }}>{char}</span>
-              ))}
-              <span className="text-secondary">
-                {'My Health Restart'.split('').map((char, i) => (
-                  <span key={i + 11} style={{ animationDelay: `${(i + 11) * 0.05}s` }}>{char}</span>
-                ))}
-              </span>
-              <span style={{ animationDelay: '1.3s' }}>?</span>
+          <div className="text-center mb-16 scroll-reveal-element" style={{ animationDelay: '0.2s' }}>
+            <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-slate-800 dark:text-white mb-4">
+              Why Choose <span className="text-secondary bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">My Health Restart</span>?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto animate-slideUp">
+            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto text-lg">
               We are committed to providing the highest quality healthcare products with exceptional service.
             </p>
           </div>
@@ -68,8 +60,8 @@ export default function Home() {
             {features.map((feature, index) => (
               <div 
                 key={feature.id} 
-                className="scroll-reveal animate-slideUp transform transition-all duration-500 hover:scale-105" 
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="scroll-reveal-element transform transition-all duration-500 hover:scale-105 hover:rotate-1" 
+                style={{ animationDelay: `${(index + 1) * 0.2}s` }}
               >
                 <FeatureCard feature={feature} />
               </div>
