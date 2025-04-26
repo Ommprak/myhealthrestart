@@ -5,6 +5,7 @@ import ProductCard from "@/components/ui/product-card";
 import FeatureCard from "@/components/ui/feature-card";
 import { features } from "@/data/features";
 import { testimonials } from "@/data/testimonials";
+import ContactPopup from "@/components/ui/contact-popup";
 
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
@@ -12,7 +13,7 @@ export default function Home() {
   
   return (
     <div>
-      {/* <ContactPopup /> */}
+      <ContactPopup />
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
