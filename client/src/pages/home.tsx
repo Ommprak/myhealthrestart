@@ -39,8 +39,8 @@ export default function Home() {
             </div>
             <div className="md:w-1/2 flex justify-center">
               <img 
-                src="https://images.unsplash.com/photo-1631815588090-d4bfec5b7e9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=500&q=80"
-                alt="Medical professionals discussing" 
+                src="/attached_assets/WhatsApp Image 2025-04-26 at 13.21.58_abe628d5.jpg"
+                alt="Healthcare professional with laptop" 
                 className="rounded-lg shadow-xl w-full max-w-md"
               />
             </div>
