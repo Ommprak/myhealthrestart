@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
+import { X, Phone } from 'lucide-react';
 import { Button } from './button';
 import { Input } from './input';
 import { Textarea } from './textarea';
@@ -32,7 +32,7 @@ export default function ContactPopup() {
 
   return (
     <>
-      {isOpen && (
+      {isOpen ? (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
           <div className="bg-white dark:bg-slate-800 rounded-lg p-6 max-w-md w-full mx-4 relative">
             <button 
@@ -86,22 +86,14 @@ export default function ContactPopup() {
             </form>
           </div>
         </div>
-      )}
-
-      {submissions.length > 0 && (
-        <div className="mt-16 container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">Submitted Contact Forms</h2>
-          <div className="grid gap-6">
-            {submissions.map((submission, index) => (
-              <div key={index} className="bg-white dark:bg-slate-800 p-6 rounded-lg shadow">
-                <h3 className="font-semibold mb-2">{submission.name}</h3>
-                <p className="text-slate-600 dark:text-slate-300">Place: {submission.place}</p>
-                <p className="text-slate-600 dark:text-slate-300">Email: {submission.email}</p>
-                <p className="text-slate-600 dark:text-slate-300">Query: {submission.query}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+      ) : (
+        <button
+          onClick={() => setIsOpen(true)}
+          className="fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white rounded-full p-4 shadow-lg flex items-center gap-2 z-50"
+        >
+          <Phone className="h-6 w-6" />
+          <span>Contact Us</span>
+        </button>
       )}
     </>
   );
