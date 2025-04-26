@@ -15,19 +15,16 @@ export default function Header() {
   const [location] = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 bg-white dark:bg-slate-800 shadow-md">
+    <header className="sticky top-0 z-50 bg-white/70 dark:bg-slate-800/70 shadow-md backdrop-blur-sm">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="text-primary-dark dark:text-primary-light text-3xl">
-              <i className="ri-heart-pulse-fill"></i>
-            </div>
-            <div>
-              <span className="font-heading font-bold text-xl text-primary dark:text-primary-light">
-                MediCare<span className="text-secondary">Plus</span>
-              </span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <img 
+              src="/attached_assets/myhealth-restart-logo.png" 
+              alt="MyHealth Restart Logo" 
+              className="h-8 w-auto"
+            />
           </Link>
 
           {/* Mobile menu button */}
