@@ -83,7 +83,7 @@ export default function ContactPopup() {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white rounded-full p-4 shadow-lg flex items-center gap-2 z-50"
+          className="fixed bottom-6 right-6 bg-primary hover:bg-primary/90 text-white rounded-full p-4 shadow-lg flex items-center gap-2 z-50 transition-transform hover:scale-105 animate-bounce hover:animate-none"
         >
           <Phone className="h-6 w-6 animate-swing" />
           <span>Contact Us</span>
