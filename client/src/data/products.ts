@@ -66,6 +66,16 @@ export const products: Product[] = [
     category: "Supplements",
     rating: 0,
     reviewCount: 0
+  },
+  {
+    id: 6,
+    name: "",
+    description: "",
+    price: 0,
+    image: "https://i.im.ge/2025/04/27/vU1ahC.IMG-20250421-WA0019.jpeg",
+    category: "Supplements",
+    rating: 0,
+    reviewCount: 0
   }
 ];
 
