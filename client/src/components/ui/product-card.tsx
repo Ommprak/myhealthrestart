@@ -62,9 +62,6 @@ export default function ProductCard({ product }: ProductCardProps) {
             {formatPrice(product.price)}
           </span>
         </div>
-        <Button className="w-full" variant="default">
-          View Details
-        </Button>
       </div>
     </div>
   );
