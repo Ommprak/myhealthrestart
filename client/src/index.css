@@ -3,6 +3,35 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    font-size: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    html {
+      font-size: 14px;
+    }
+  }
+
+  .hero-section {
+    min-height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding: 0 2rem;
+    }
+  }
   * {
     transition: background-color 0.3s ease, color 0.3s ease;
   }

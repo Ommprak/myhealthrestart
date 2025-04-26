@@ -16,7 +16,7 @@ export default function Home() {
     <div>
       <ContactPopup />
       {/* Hero Section */}
-      <section className="relative min-h-[800px] flex items-center">
+      <section className="hero-section relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://i.im.ge/2025/04/27/vUO3Uq.WhatsApp-Image-2025-04-27-at-12-16-24-AM.jpeg"
@@ -25,17 +25,17 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-2xl">
-            <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 sm:mb-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
+        <div className="container mx-auto px-4 relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
               PhytoScience presents
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 animate-slideUp" style={{ animationDelay: '0.4s' }}>
+            <p className="text-xl sm:text-2xl text-white/90 mb-8 animate-slideUp" style={{ animationDelay: '0.4s' }}>
               Advanced Healthcare Solutions
             </p>
-            <div className="flex justify-start animate-slideUp" style={{ animationDelay: '0.6s' }}>
+            <div className="flex justify-center animate-slideUp" style={{ animationDelay: '0.6s' }}>
               <Link href="/products">
-                <Button className="px-6 py-3 shadow-md hover:shadow-lg bg-primary-light hover:bg-primary text-white transition-transform hover:scale-105 duration-300">
+                <Button className="text-lg px-8 py-4 shadow-md hover:shadow-lg bg-primary-light hover:bg-primary text-white transition-transform hover:scale-105 duration-300">
                   Explore Products <i className="ri-arrow-right-line ml-2"></i>
                 </Button>
               </Link>
