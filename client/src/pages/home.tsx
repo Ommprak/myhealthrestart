@@ -27,15 +27,15 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
-            <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 sm:mb-6">
+            <h1 className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-4 sm:mb-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
               PhytoScience presents
             </h1>
-            <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8">
+            <p className="text-lg sm:text-xl text-white/90 mb-6 sm:mb-8 animate-slideUp" style={{ animationDelay: '0.4s' }}>
               Advanced Healthcare Solutions
             </p>
-            <div className="flex justify-start">
+            <div className="flex justify-start animate-slideUp" style={{ animationDelay: '0.6s' }}>
               <Link href="/products">
-                <Button className="px-6 py-3 shadow-md hover:shadow-lg bg-primary-light hover:bg-primary text-white">
+                <Button className="px-6 py-3 shadow-md hover:shadow-lg bg-primary-light hover:bg-primary text-white transition-transform hover:scale-105 duration-300">
                   Explore Products <i className="ri-arrow-right-line ml-2"></i>
                 </Button>
               </Link>
