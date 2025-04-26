@@ -13,9 +13,6 @@ export default function Home() {
   return (
     <div>
       <ContactPopup />
-
-  return (
-    <div>
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center">
         <div className="absolute inset-0 z-0">
