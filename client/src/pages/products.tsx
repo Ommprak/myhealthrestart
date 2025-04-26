@@ -27,25 +27,9 @@ export default function Products() {
         accentWord="Products"
       />
 
-      {/* Product Categories */}
+      {/* Products Section */}
       <section className="py-12 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-            {productCategories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={cn(
-                  "px-6 py-2 rounded-full font-medium transition-colors",
-                  selectedCategory === category
-                    ? "bg-primary text-white"
-                    : "bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-200 hover:bg-primary/10 dark:hover:bg-primary-dark/20"
-                )}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {displayedProducts.map(product => (
