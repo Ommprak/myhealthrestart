@@ -15,13 +15,7 @@ export default function ContactPopup() {
   });
   const [submissions, setSubmissions] = useState<Array<typeof formData>>([]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsOpen(true);
-    }, 15000);
-
-    return () => clearTimeout(timer);
-  }, []);
+  // Removed auto-popup timer to only show on click
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

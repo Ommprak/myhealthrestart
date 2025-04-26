@@ -27,11 +27,10 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-2xl">
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-              Advanced Healthcare <span className="text-primary-light">Solutions</span>
+              Phytoscience presents <span className="text-primary-light">My Health Restart</span>
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              Providing premium quality medicines and healthcare products for over 25 years.
-              Trusted by healthcare professionals worldwide.
+              Advanced Healthcare Solutions
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link href="/products">
