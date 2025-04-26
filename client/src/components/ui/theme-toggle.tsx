@@ -7,18 +7,18 @@ export function ThemeToggle() {
 
   return (
     <Button 
-      variant="ghost" 
-      size="icon" 
+      variant="outline" 
+      size="default" 
       onClick={toggleTheme}
-      className="h-9 w-9 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all duration-300"
+      className="transition-colors duration-300"
       aria-label="Toggle theme"
     >
       {isDark ? (
-        <i className="ri-moon-line text-xl text-slate-300 transition-all duration-300 transform scale-100" aria-hidden="true"></i>
+        <i className="ri-moon-line mr-2 text-slate-300" aria-hidden="true"></i>
       ) : (
-        <i className="ri-sun-line text-xl text-yellow-500 transition-all duration-300 transform scale-100" aria-hidden="true"></i>
+        <i className="ri-sun-line mr-2 text-yellow-500" aria-hidden="true"></i>
       )}
-      <span className="sr-only">Toggle theme</span>
+      Toggle theme
     </Button>
   );
 }
