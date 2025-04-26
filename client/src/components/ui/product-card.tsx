@@ -1,6 +1,7 @@
 import { Product } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { formatPrice } from "@/lib/utils";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 interface ProductCardProps {
   product: Product;
@@ -10,11 +11,22 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow border border-slate-200 dark:border-slate-700">
       <div className="relative">
-        <img 
-          src={product.image} 
-          alt={product.name} 
-          className="w-full h-48 object-cover"
-        />
+        <Dialog>
+          <DialogTrigger asChild>
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              className="w-full h-48 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+            />
+          </DialogTrigger>
+          <DialogContent className="max-w-3xl p-0">
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              className="w-full max-h-[80vh] object-contain"
+            />
+          </DialogContent>
+        </Dialog>
         {product.badge && (
           <span className={`absolute top-2 right-2 bg-${product.badge.color} text-white text-xs font-bold px-2 py-1 rounded`}>
             {product.badge.text}
