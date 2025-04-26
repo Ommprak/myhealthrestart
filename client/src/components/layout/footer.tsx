@@ -10,7 +10,7 @@ export default function Footer() {
               <img 
                 src="https://res.cloudinary.com/df8blxifj/image/upload/v1745658047/hqb4keyjnhrajibm0k6c.png" 
                 alt="MyHealth Restart Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto"
               />
             </div>
             <p className="text-slate-300 mb-6">
