@@ -29,10 +29,10 @@ export default function About() {
               <p className="text-slate-600 dark:text-slate-300 mb-4">
                 Our dedication to scientific research, quality manufacturing, and customer satisfaction has established us as a leader in the healthcare industry.
               </p>
-              <div className="flex items-center mt-8">
-                <div className="flex flex-col items-center mr-8">
-                  <span className="text-primary dark:text-primary-light font-bold text-3xl">25+</span>
-                  <span className="text-slate-500 dark:text-slate-400 text-sm">Years Experience</span>
+              <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center mt-8">
+                <div className="flex flex-col items-center sm:mr-8">
+                  <span className="text-primary dark:text-primary-light font-bold text-2xl sm:text-3xl">25+</span>
+                  <span className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm text-center">Years Experience</span>
                 </div>
                 <div className="flex flex-col items-center mr-8">
                   <span className="text-primary dark:text-primary-light font-bold text-3xl">45+</span>

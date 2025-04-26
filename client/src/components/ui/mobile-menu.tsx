@@ -26,9 +26,9 @@ export function MobileMenu({ links }: MobileMenuProps) {
         aria-label={isOpen ? "Close menu" : "Open menu"}
       >
         {isOpen ? (
-          <i className="ri-close-line text-2xl"></i>
+          <i className="ri-close-line text-3xl p-1"></i>
         ) : (
-          <i className="ri-menu-line text-2xl"></i>
+          <i className="ri-menu-line text-3xl p-1"></i>
         )}
       </button>
 
