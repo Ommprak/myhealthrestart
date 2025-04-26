@@ -19,7 +19,7 @@ export default function Home() {
       <section className="relative min-h-[800px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://i.im.ge/2025/04/27/vUOj39.ChatGPT-Image-Apr-27-2025-12-07-42-AM.png"
+            src="https://i.im.ge/2025/04/27/vUO3Uq.WhatsApp-Image-2025-04-27-at-12-16-24-AM.jpeg"
             alt="Healthcare background" 
             className="w-full h-full object-cover animate-fadeIn"
           />
