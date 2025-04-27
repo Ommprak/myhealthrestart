@@ -7,16 +7,23 @@ export function useScrollReveal() {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-        } else {
-          entry.target.classList.remove('visible');
+          // Add visible class to child feature boxes with delay
+          if (entry.target.classList.contains('section-animate')) {
+            const features = entry.target.querySelectorAll('.feature-box');
+            features.forEach((feature, index) => {
+              setTimeout(() => {
+                feature.classList.add('visible');
+              }, index * 200); // Stagger animation
+            });
+          }
         }
       });
     }, {
       threshold: 0.1,
-      rootMargin: '0px'
+      rootMargin: '-50px'
     });
 
-    const elements = document.querySelectorAll('.scroll-reveal');
+    const elements = document.querySelectorAll('.scroll-reveal, .section-animate, .feature-box');
     elements.forEach(el => observer.observe(el));
 
     return () => {

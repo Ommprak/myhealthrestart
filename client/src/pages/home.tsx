@@ -46,7 +46,7 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-slate-800 scroll-reveal relative overflow-hidden">
+      <section className="py-16 bg-white dark:bg-slate-800 section-animate relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0.2s' }}>
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4 animate-text-reveal">

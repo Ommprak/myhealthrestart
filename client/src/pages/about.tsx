@@ -13,7 +13,7 @@ export default function About() {
       />
 
       {/* Our Story Section */}
-      <section className="py-16 bg-white dark:bg-slate-800">
+      <section className="py-16 bg-white dark:bg-slate-800 section-animate">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-10 md:mb-0 md:pr-12">
