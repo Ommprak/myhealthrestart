@@ -149,10 +149,16 @@
   animation: fadeIn 1.5s ease-out forwards;
 }
 
-.hero-content {
+.hero-section p {
   opacity: 0;
   animation: slideUp 1s ease-out forwards;
-  animation-delay: 0.5s;
+  animation-delay: 0.8s;
+}
+
+.hero-section .button-container {
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 1s;
 }
 
 @keyframes revealLetter {

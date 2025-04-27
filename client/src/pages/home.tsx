@@ -31,10 +31,10 @@ export default function Home() {
               Phyto Science<br />
               <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 block">Presents</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-white/90 mb-8 animate-slideUp" style={{ animationDelay: '0.4s' }}>
+            <p className="text-xl sm:text-2xl text-white/90 mb-8">
               Advanced Healthcare Solutions
             </p>
-            <div className="flex animate-slideUp" style={{ animationDelay: '0.6s' }}>
+            <div className="flex button-container">
               <Link href="/products">
                 <Button className="text-lg px-8 py-4 shadow-md hover:shadow-lg bg-primary-light hover:bg-primary text-white transition-transform hover:scale-105 duration-300">
                   Explore Products <i className="ri-arrow-right-line ml-2"></i>
