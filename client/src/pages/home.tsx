@@ -19,7 +19,7 @@ export default function Home() {
       <section className="hero-section relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/attached_assets/WhatsApp Image 2025-04-26 at 13.21.58_abe628d5.jpg"
+            src="https://i.im.ge/2025/04/27/vUO3Uq.WhatsApp-Image-2025-04-27-at-12-16-24-AM.jpeg"
             alt="Healthcare background" 
             className="w-full h-full object-cover animate-fadeIn"
           />
@@ -27,11 +27,11 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6">
-              Phytoscience presents <br />
-              <span className="text-primary-light">My Health Restart</span>
+            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 animate-slideUp" style={{ animationDelay: '0.2s' }}>
+              Phyto Science<br />
+              <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 block">Presents</span>
             </h1>
-            <p className="text-xl sm:text-2xl text-white/90 mb-8">
+            <p className="text-xl sm:text-2xl text-white/90 mb-8 animate-slideUp" style={{ animationDelay: '0.4s' }}>
               Advanced Healthcare Solutions
             </p>
             <div className="flex animate-slideUp" style={{ animationDelay: '0.6s' }}>
