@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { announcements } from "@/data/announcements";
 import { products } from "@/data/products";
 import ProductCard from "@/components/ui/product-card";
 import FeatureCard from "@/components/ui/feature-card";
@@ -41,6 +42,38 @@ export default function Home() {
                 </Button>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Announcements Section */}
+      <section className="py-16 bg-slate-50 dark:bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="text-sm font-medium text-primary dark:text-primary-light uppercase tracking-wider">Latest Update</span>
+            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mt-2">
+              Announcement
+            </h2>
+          </div>
+          <div className="max-w-4xl mx-auto h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-700">
+            {announcements.map((announcement) => (
+              <div 
+                key={announcement.id}
+                className="bg-white dark:bg-slate-800 rounded-lg shadow-md p-6 mb-4"
+              >
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-heading font-semibold text-xl text-slate-800 dark:text-white">
+                    {announcement.title}
+                  </h3>
+                  <span className="text-sm text-slate-500 dark:text-slate-400">
+                    {new Date(announcement.date).toLocaleDateString()}
+                  </span>
+                </div>
+                <p className="text-slate-600 dark:text-slate-300 whitespace-pre-line">
+                  {announcement.content}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

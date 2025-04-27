@@ -3,6 +3,33 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom scrollbar styles */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-slate-200 {
+  scrollbar-color: #e2e8f0 transparent;
+}
+
+.dark .scrollbar-thumb-slate-700 {
+  scrollbar-color: #334155 transparent;
+}
+
+/* For Webkit browsers */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollbar-thumb-slate-200::-webkit-scrollbar-thumb {
+  background-color: #e2e8f0;
+  border-radius: 3px;
+}
+
+.dark .scrollbar-thumb-slate-700::-webkit-scrollbar-thumb {
+  background-color: #334155;
+}
+
 @layer base {
   html {
     font-size: 16px;
