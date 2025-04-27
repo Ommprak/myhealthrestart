@@ -46,31 +46,22 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-slate-800 section-animate relative overflow-hidden">
+      <section className="py-16 bg-white dark:bg-slate-800 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16 scroll-reveal" style={{ animationDelay: '0.2s' }}>
-            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4 animate-text-reveal">
-              {'Why Choose '.split('').map((char, i) => (
-                <span key={i} style={{ animationDelay: `${i * 0.05}s` }}>{char}</span>
-              ))}
-              <span className="text-secondary">
-                {'My Health Restart'.split('').map((char, i) => (
-                  <span key={i + 11} style={{ animationDelay: `${(i + 11) * 0.05}s` }}>{char}</span>
-                ))}
-              </span>
-              <span style={{ animationDelay: '1.3s' }}>?</span>
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
+              Why Choose My Health Restart?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto animate-slideUp">
+            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
               We are committed to providing the highest quality healthcare products with exceptional service.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <div 
                 key={feature.id} 
-                className="scroll-reveal animate-slideUp transform transition-all duration-500 hover:scale-105" 
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="transform transition-all duration-500 hover:scale-105"
               >
                 <FeatureCard feature={feature} />
               </div>
