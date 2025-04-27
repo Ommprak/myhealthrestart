@@ -127,20 +127,20 @@ export default function Footer() {
               <li className="flex items-start">
                 <i className="ri-map-pin-line text-primary-light mt-1 mr-3"></i>
                 <span className="text-slate-300">
-                  123 Medical Plaza, Suite 500<br />San Francisco, CA 94107
+                  Location office at gatebazar, BERHAMPUR,<br />lochapoda road, near dhuba street.
                 </span>
               </li>
               <li className="flex items-start">
                 <i className="ri-phone-line text-primary-light mt-1 mr-3"></i>
-                <span className="text-slate-300">+1 (800) 555-1234</span>
+                <span className="text-slate-300">9776932777</span>
               </li>
               <li className="flex items-start">
                 <i className="ri-mail-line text-primary-light mt-1 mr-3"></i>
-                <span className="text-slate-300">info@medicareplus.com</span>
+                <span className="text-slate-300">myhealthrestart@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <i className="ri-time-line text-primary-light mt-1 mr-3"></i>
-                <span className="text-slate-300">Monday-Friday: 8am-6pm PST</span>
+                <span className="text-slate-300">24</span>
               </li>
             </ul>
           </div>
@@ -149,7 +149,7 @@ export default function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400 mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} MediCarePlus. All rights reserved.
+              &copy; {new Date().getFullYear()} My Health Restart. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-slate-400 hover:text-primary-light transition-colors text-sm">

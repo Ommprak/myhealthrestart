@@ -134,8 +134,8 @@ export default function About() {
                         Headquarters
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300">
-                        123 Medical Plaza, Suite 500<br />
-                        San Francisco, CA 94107
+                        Location office at gatebazar, BERHAMPUR,<br />
+                        lochapoda road, near dhuba street.
                       </p>
                     </div>
                   </div>
@@ -148,8 +148,8 @@ export default function About() {
                         Phone
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300">
-                        +1 (800) 555-1234<br />
-                        Monday-Friday, 8am-6pm PST
+                        9776932777<br />
+                        24
                       </p>
                     </div>
                   </div>
@@ -162,8 +162,7 @@ export default function About() {
                         Email
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300">
-                        info@medicareplus.com<br />
-                        support@medicareplus.com
+                        myhealthrestart@gmail.com
                       </p>
                     </div>
                   </div>
