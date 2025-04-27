@@ -127,7 +127,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <i className="ri-map-pin-line text-primary-light mt-1 mr-3"></i>
                 <span className="text-slate-300">
-                  At Gatebazar (lochapoda road, near dhuba street), Berhampur, Odisha<br />
+                  At Gatebazar (Lochapoda road, near Dhuba street), Berhampur, Odisha<br />
                 </span>
               </li>
               <li className="flex items-start">

@@ -134,8 +134,9 @@ export default function About() {
                         Headquarters
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300">
-                        Location office at gatebazar, BERHAMPUR,<br />
-                        lochapoda road, near dhuba street.
+                        <span className="text-slate-300">
+                          At Gatebazar (Lochapoda road, near Dhuba street), Berhampur, Odisha<br />
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -149,7 +150,6 @@ export default function About() {
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300">
                         9776932777<br />
-                        24
                       </p>
                     </div>
                   </div>
