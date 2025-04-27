@@ -16,12 +16,13 @@ export default function Home() {
     <div>
       <ContactPopup />
       {/* Hero Section */}
-      <section className="hero-section relative min-h-screen flex items-center justify-center">
-        <div className="absolute inset-0 z-0">
+      <section className="hero-section relative min-h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 w-full h-full">
           <img 
-            src="https://i.im.ge/2025/04/27/vUO3Uq.WhatsApp-Image-2025-04-27-at-12-16-24-AM.jpeg"
+            src="/attached_assets/WhatsApp Image 2025-04-26 at 13.21.58_abe628d5.jpg"
             alt="Healthcare background" 
             className="w-full h-full object-cover animate-fadeIn"
+            style={{ minHeight: '100vh' }}
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
