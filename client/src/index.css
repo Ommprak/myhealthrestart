@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,31 +41,31 @@
   }
 
   :root {
-  --background: 0 0% 100%;
-  --foreground: 20 14.3% 4.1%;
-  --muted: 60 4.8% 95.9%;
-  --muted-foreground: 25 5.3% 44.7%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 20 14.3% 4.1%;
-  --card: 0 0% 100%;
-  --card-foreground: 20 14.3% 4.1%;
-  --border: 20 5.9% 90%;
-  --input: 20 5.9% 90%;
-  --primary: 207 90% 54%;
-  --primary-foreground: 211 100% 99%;
-  --secondary: 122 39% 49%;
-  --secondary-foreground: 24 9.8% 10%;
-  --accent: 339 90% 51%;
-  --accent-foreground: 24 9.8% 10%;
-  --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 60 9.1% 97.8%;
-  --ring: 20 14.3% 4.1%;
-  --radius: 0.5rem;
-  --chart-1: 207 90% 54%;
-  --chart-2: 122 39% 49%;
-  --chart-3: 339 90% 51%;
-  --chart-4: 48 96% 53%;
-  --chart-5: 262 83% 58%;
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --primary: 207 90% 54%;
+    --primary-foreground: 211 100% 99%;
+    --secondary: 122 39% 49%;
+    --secondary-foreground: 24 9.8% 10%;
+    --accent: 339 90% 51%;
+    --accent-foreground: 24 9.8% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --ring: 20 14.3% 4.1%;
+    --radius: 0.5rem;
+    --chart-1: 207 90% 54%;
+    --chart-2: 122 39% 49%;
+    --chart-3: 339 90% 51%;
+    --chart-4: 48 96% 53%;
+    --chart-5: 262 83% 58%;
   }
 
   body {
@@ -123,7 +124,6 @@
   transition: opacity 0.3s ease;
 }
 
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -176,9 +176,6 @@
   animation: revealLetter 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-  }
-}
-
 @keyframes swing {
   0%, 100% { transform: rotate(-10deg); }
   50% { transform: rotate(10deg); }
@@ -188,17 +185,6 @@
   animation: fadeIn 1s ease-out;
   opacity: 0;
   animation-fill-mode: forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 .animate-slideUp {
@@ -218,4 +204,3 @@
 .animate-slideUp {
   animation: slideUp 0.5s ease-out;
 }
-
