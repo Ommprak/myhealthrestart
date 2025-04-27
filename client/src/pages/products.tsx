@@ -35,8 +35,11 @@ export default function Products() {
             {displayedProducts.map((product, index) => (
               <div
                 key={product.id}
-                className="animate-fadeIn"
-                style={{ animationDelay: `${index * 0.2}s` }}
+                className="opacity-0"
+                style={{ 
+                  animation: 'slideUp 0.8s ease-out forwards',
+                  animationDelay: `${index * 0.15}s` 
+                }}
               >
                 <ProductCard product={product} />
               </div>
