@@ -21,13 +21,13 @@ export default function About() {
                 Our Story
               </h2>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                Founded in 1998 by Dr. James Carter, MediCarePlus began with a simple mission: to create healthcare products that truly make a difference in people's lives.
+                Phyto Science is a leading global health and wellness company focused on transforming lives through innovative nutrition and skincare products.
               </p>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                What started as a small research lab has grown into a global healthcare company trusted by medical professionals and patients in over 45 countries.
+                With a strong commitment to improving physical health and financial well-being, Phyto Science empowers individuals with cutting-edge solutions and business opportunities.
               </p>
               <p className="text-slate-600 dark:text-slate-300 mb-4">
-                Our dedication to scientific research, quality manufacturing, and customer satisfaction has established us as a leader in the healthcare industry.
+                Dedicated to excellence, the company continues to pioneer trends in natural wellness while helping people achieve healthier, wealthier lives.
               </p>
               <div className="grid grid-cols-3 gap-4 sm:flex sm:items-center mt-8">
                 <div className="flex flex-col items-center sm:mr-8">
