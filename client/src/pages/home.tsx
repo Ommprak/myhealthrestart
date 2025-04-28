@@ -50,9 +50,9 @@ export default function Home() {
       <section className="py-16 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-sm font-medium text-primary dark:text-primary-light uppercase tracking-wider">Latest Update</span>
+            <span className="text-sm font-medium text-primary dark:text-primary-light uppercase tracking-wider">Company Updates</span>
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mt-2">
-              Announcement
+              Latest Announcements
             </h2>
           </div>
           <div className="max-w-4xl mx-auto h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-700">
