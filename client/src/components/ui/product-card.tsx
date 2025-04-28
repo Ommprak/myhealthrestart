@@ -1,6 +1,7 @@
 import { Product } from "@/data/products";
 import { Button } from "@/components/ui/button";
 import { ProductRating } from "@/components/ui/product-rating";
+import { ProductReviewAnalysis } from "@/components/ui/product-review-analysis";
 import { formatPrice } from "@/lib/utils";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from 'react';
@@ -69,6 +70,9 @@ export default function ProductCard({ product }: ProductCardProps) {
           >
             Rate Product
           </Button>
+        </div>
+        <div className="mt-4">
+          <ProductReviewAnalysis ratings={product.ratings || []} />
         </div>
         {showRating && (
           <div className="mt-4">
