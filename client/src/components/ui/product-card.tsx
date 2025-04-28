@@ -13,10 +13,15 @@ interface ProductCardProps {
 export default function ProductCard({ product }: ProductCardProps) {
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [showRating, setShowRating] = useState(false);
+  const [productRatings, setProductRatings] = useState(product.ratings || []);
 
   const handleRatingSubmit = (rating: any) => {
-    // Here you would typically make an API call to save the rating
-    console.log('Rating submitted:', rating);
+    const newRating = {
+      quality: rating.quality,
+      performance: rating.performance,
+      value: rating.value
+    };
+    setProductRatings([...productRatings, newRating]);
     setShowRating(false);
   };
 
@@ -72,7 +77,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </Button>
         </div>
         <div className="mt-4">
-          <ProductReviewAnalysis ratings={product.ratings || []} />
+          <ProductReviewAnalysis ratings={productRatings} />
         </div>
         {showRating && (
           <div className="mt-4">
