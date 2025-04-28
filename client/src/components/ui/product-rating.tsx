@@ -42,7 +42,7 @@ export function ProductRating({ productId, onSubmit }: RatingProps) {
           key={star}
           onClick={() => handleRatingClick(category, star)}
           className={cn(
-            "text-lg transition-colors",
+            "text-sm transition-colors",
             star <= ratings[category] ? "text-yellow-400" : "text-gray-300"
           )}
         >
@@ -53,18 +53,18 @@ export function ProductRating({ productId, onSubmit }: RatingProps) {
   );
 
   return (
-    <div className="space-y-2 p-3 bg-white dark:bg-slate-800 rounded-lg shadow text-sm">
-      <div className="space-y-2">
-        <div className="flex justify-between items-center gap-2">
-          <span className="font-medium text-xs">Quality</span>
+    <div className="space-y-1 p-2 bg-white dark:bg-slate-800 rounded-lg shadow text-xs">
+      <div className="space-y-1">
+        <div className="flex justify-between items-center gap-1">
+          <span className="font-medium text-[10px]">Quality</span>
           <RatingStars category="quality" />
         </div>
-        <div className="flex justify-between items-center gap-2">
-          <span className="font-medium text-xs">Performance</span>
+        <div className="flex justify-between items-center gap-1">
+          <span className="font-medium text-[10px]">Performance</span>
           <RatingStars category="performance" />
         </div>
-        <div className="flex justify-between items-center gap-2">
-          <span className="font-medium text-xs">Value</span>
+        <div className="flex justify-between items-center gap-1">
+          <span className="font-medium text-[10px]">Value</span>
           <RatingStars category="value" />
         </div>
       </div>
@@ -72,12 +72,12 @@ export function ProductRating({ productId, onSubmit }: RatingProps) {
         placeholder="Share your experience..."
         value={comment}
         onChange={(e) => setComment(e.target.value)}
-        className="w-full mt-2 text-xs h-20 resize-none"
+        className="w-full mt-1 text-[10px] h-16 resize-none"
       />
       <Button 
         onClick={handleSubmit}
         disabled={!ratings.quality || !ratings.performance || !ratings.value}
-        className="w-full mt-2 text-xs py-1"
+        className="w-full mt-1 text-[10px] py-0.5"
       >
         Submit Review
       </Button>
