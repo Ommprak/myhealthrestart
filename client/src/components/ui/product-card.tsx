@@ -72,16 +72,9 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
         <div className="mt-4">
           <ProductReviewAnalysis 
-            ratings={productRatings} 
+            productId={product.id}
             onRatingSubmit={(rating) => {
-              const newRating = {
-                quality: rating,
-                performance: rating,
-                value: rating,
-                comment: "",
-                date: new Date().toLocaleDateString()
-              };
-              setProductRatings([...productRatings, newRating]);
+              console.log('Rating submitted:', rating);
             }}
           />
         </div>

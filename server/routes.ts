@@ -50,3 +50,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   return httpServer;
 }
+import { Router } from 'express';
+import nodemailer from 'nodemailer';
+
+const router = Router();
+const reviews = new Map();
+
+router.post('/api/reviews/:productId', (req, res) => {
+  const { productId } = req.params;
+  const review = req.body;
+  if (!reviews.has(productId)) {
+    reviews.set(productId, []);
+  }
+  reviews.get(productId).push({
+    ...review,
+    date: new Date().toISOString()
+  });
+  res.json({ success: true });
+});
+
+router.get('/api/reviews/:productId', (req, res) => {
+  const { productId } = req.params;
+  res.json(reviews.get(productId) || []);
+});
+
+export default router;
