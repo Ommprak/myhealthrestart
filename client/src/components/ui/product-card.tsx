@@ -14,7 +14,6 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [showRating, setShowRating] = useState(false);
   const [productRatings, setProductRatings] = useState(product.ratings || []);
-  const [showReviews, setShowReviews] = useState(false);
 
   const handleRatingSubmit = (rating: any) => {
     const newRating = {
@@ -94,16 +93,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             <ProductRating productId={product.id} onSubmit={handleRatingSubmit} />
           </div>
         )}
-        <Button 
-          variant="outline" 
-          size="sm" 
-          className="mt-2 w-full"
-          onClick={() => setShowReviews(!showReviews)}
-        >
-          {showReviews ? 'Hide Reviews' : `Show Reviews (${productRatings.length})`}
-        </Button>
-        {showReviews && (
-          <div className="mt-4 space-y-4">
+        <div className="mt-4 space-y-4">
             {productRatings.map((rating, index) => (
               <div key={index} className="border rounded p-3 space-y-2">
                 <div className="flex justify-between">
@@ -128,7 +118,6 @@ export default function ProductCard({ product }: ProductCardProps) {
               </div>
             )}
           </div>
-        )}
       </div>
     </div>
   );
