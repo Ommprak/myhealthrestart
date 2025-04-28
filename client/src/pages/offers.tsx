@@ -1,7 +1,5 @@
+
 import PageHeader from "@/components/layout/page-header";
-import OfferCard from "@/components/ui/offer-card";
-import { Button } from "@/components/ui/button";
-import { offers, subscriptionItems } from "@/data/offers";
 
 export default function Offers() {
   return (
@@ -12,18 +10,15 @@ export default function Offers() {
         accentWord="Offers"
       />
 
-      {/* Current Offers */}
       <section className="py-12 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {offers.map(offer => (
-              <OfferCard key={offer.id} offer={offer} />
-            ))}
+          <div className="text-center">
+            <p className="text-slate-600 dark:text-slate-300">
+              Check back soon for new offers and promotions!
+            </p>
           </div>
         </div>
       </section>
-
-      
     </div>
   );
 }
