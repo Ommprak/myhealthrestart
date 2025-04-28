@@ -14,6 +14,20 @@ export interface Product {
   rating: number;
   reviewCount: number;
   badge?: ProductBadge;
+  ratings: {
+    quality: number;
+    performance: number;
+    value: number;
+  }[];
+  reviews: {
+    comment: string;
+    date: string;
+    ratings: {
+      quality: number;
+      performance: number;
+      value: number;
+    };
+  }[];
 }
 
 export const products: Product[] = [

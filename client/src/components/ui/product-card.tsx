@@ -1,5 +1,6 @@
 import { Product } from "@/data/products";
 import { Button } from "@/components/ui/button";
+import { ProductRating } from "@/components/ui/product-rating";
 import { formatPrice } from "@/lib/utils";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { useState } from 'react';
@@ -10,6 +11,13 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const [isImageOpen, setIsImageOpen] = useState(false);
+  const [showRating, setShowRating] = useState(false);
+
+  const handleRatingSubmit = (rating: any) => {
+    // Here you would typically make an API call to save the rating
+    console.log('Rating submitted:', rating);
+    setShowRating(false);
+  };
 
   return (
     <div className="group relative w-full rounded-lg border p-2">
@@ -53,7 +61,20 @@ export default function ProductCard({ product }: ProductCardProps) {
               ></i>
             ))}
           </div>
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="mt-2"
+            onClick={() => setShowRating(!showRating)}
+          >
+            Rate Product
+          </Button>
         </div>
+        {showRating && (
+          <div className="mt-4">
+            <ProductRating productId={product.id} onSubmit={handleRatingSubmit} />
+          </div>
+        )}
       </div>
     </div>
   );
