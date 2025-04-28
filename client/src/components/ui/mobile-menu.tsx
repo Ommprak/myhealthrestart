@@ -19,7 +19,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
   };
 
   return (
-    <div className="lg:hidden">
+    <div className="lg:hidden ml-auto">
       <button
         onClick={toggleMenu}
         className="flex items-center justify-center w-12 h-12 text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-primary-light transition-all rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700"
