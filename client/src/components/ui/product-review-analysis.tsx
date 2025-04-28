@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from '@/lib/utils';
 
@@ -17,60 +16,34 @@ interface ProductReviewAnalysisProps {
 }
 
 export function ProductReviewAnalysis({ ratings }: ProductReviewAnalysisProps) {
-  const calculateAverageRatings = (): RatingAnalysis => {
-    if (!ratings.length) {
-      return { quality: 0, performance: 0, value: 0 };
-    }
+  const calculateAverageRating = (): number => {
+    if (!ratings.length) return 0;
 
-    const sum = ratings.reduce((acc, curr) => ({
-      quality: acc.quality + curr.quality,
-      performance: acc.performance + curr.performance,
-      value: acc.value + curr.value,
-    }), { quality: 0, performance: 0, value: 0 });
+    const totalRating = ratings.reduce((acc, curr) => {
+      return acc + ((curr.quality + curr.performance + curr.value) / 3);
+    }, 0);
 
-    return {
-      quality: Number((sum.quality / ratings.length).toFixed(1)),
-      performance: Number((sum.performance / ratings.length).toFixed(1)),
-      value: Number((sum.value / ratings.length).toFixed(1)),
-    };
+    return Number((totalRating / ratings.length).toFixed(1));
   };
 
-  const averageRatings = calculateAverageRatings();
-
-  const RatingStars = ({ rating }: { rating: number }) => (
-    <div className="flex items-center gap-1">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <span
-          key={star}
-          className={cn(
-            "text-sm",
-            star <= rating ? "text-yellow-400" : "text-gray-300"
-          )}
-        >
-          ★
-        </span>
-      ))}
-      <span className="ml-2 text-sm text-gray-600">({rating})</span>
-    </div>
-  );
+  const averageRating = calculateAverageRating();
 
   return (
-    <div className="space-y-2 p-4 bg-white dark:bg-slate-800 rounded-lg shadow">
-      <h3 className="text-sm font-medium mb-3">Rating Analysis</h3>
-      <div className="space-y-2">
-        <div className="flex justify-between items-center">
-          <span className="text-sm">Quality</span>
-          <RatingStars rating={averageRatings.quality} />
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-sm">Performance</span>
-          <RatingStars rating={averageRatings.performance} />
-        </div>
-        <div className="flex justify-between items-center">
-          <span className="text-sm">Value</span>
-          <RatingStars rating={averageRatings.value} />
-        </div>
+    <div className="flex items-center gap-2 p-2">
+      <div className="flex items-center">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <span
+            key={star}
+            className={cn(
+              "text-lg",
+              star <= averageRating ? "text-yellow-400" : "text-gray-300"
+            )}
+          >
+            ★
+          </span>
+        ))}
       </div>
+      <span className="text-sm text-gray-600">({averageRating})</span>
     </div>
   );
 }
