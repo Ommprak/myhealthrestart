@@ -76,14 +76,6 @@ export default function ProductCard({ product }: ProductCardProps) {
               ></i>
             ))}
           </div>
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="mt-2"
-            onClick={() => setShowRating(!showRating)}
-          >
-            Rate Product
-          </Button>
         </div>
         <div className="mt-4">
           <ProductReviewAnalysis ratings={productRatings} />
