@@ -22,7 +22,7 @@ export default function Home() {
           <img 
             src="https://i.im.ge/2025/04/27/vUO3Uq.WhatsApp-Image-2025-04-27-at-12-16-24-AM.jpeg"
             alt="Healthcare background" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center md:object-center"
           />
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
