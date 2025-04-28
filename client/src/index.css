@@ -32,13 +32,37 @@
 
 @layer base {
   html {
-    font-size: 16px;
+    font-size: 14px;
+    -webkit-tap-highlight-color: transparent;
   }
   
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     html {
-      font-size: 14px;
+      font-size: 16px;
     }
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button, 
+  .button,
+  input[type="submit"] {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
+    padding: 0.5rem 1rem;
+    touch-action: manipulation;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+    min-height: 2.75rem;
+    padding: 0.5rem;
+    width: 100%;
   }
 
   .hero-section {
