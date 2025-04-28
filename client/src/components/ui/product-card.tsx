@@ -67,14 +67,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            {[...Array(5)].map((_, i) => (
-              <i
-                key={i}
-                className={`ri-star-${
-                  i < product.rating ? "fill" : "line"
-                } text-yellow-400 text-sm`}
-              ></i>
-            ))}
+            <span className="text-sm text-gray-600">Rating: {product.rating}/5</span>
           </div>
         </div>
         <div className="mt-4">
