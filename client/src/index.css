@@ -31,9 +31,56 @@
 }
 
 @layer base {
+  :root {
+    --header-height: 4rem;
+    --container-padding: 1rem;
+  }
+
   html {
     font-size: 14px;
     -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+  }
+
+  img, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  button, 
+  .button,
+  a[role="button"] {
+    min-height: 3rem;
+    min-width: 3rem;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    touch-action: manipulation;
+  }
+
+  input,
+  select,
+  textarea {
+    min-height: 3rem;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  @media (min-width: 768px) {
+    :root {
+      --container-padding: 2rem;
+    }
+    html {
+      font-size: 16px;
+    }
   }
   
   @media (min-width: 768px) {

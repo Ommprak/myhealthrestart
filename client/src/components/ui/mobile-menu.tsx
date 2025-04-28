@@ -22,8 +22,9 @@ export function MobileMenu({ links }: MobileMenuProps) {
     <div className="lg:hidden">
       <button
         onClick={toggleMenu}
-        className="text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-primary-light transition-colors"
+        className="flex items-center justify-center w-12 h-12 text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-primary-light transition-all rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700"
         aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isOpen}
       >
         {isOpen ? (
           <i className="ri-close-line text-3xl p-1"></i>
