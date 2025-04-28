@@ -149,7 +149,7 @@ export default function About() {
                         Phone
                       </h3>
                       <p className="text-slate-600 dark:text-slate-300">
-                        9776932777<br />
+                        +91 9776932777<br />
                       </p>
                     </div>
                   </div>
