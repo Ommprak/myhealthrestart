@@ -14,15 +14,25 @@ export default function ProductCard({ product }: ProductCardProps) {
   const [isImageOpen, setIsImageOpen] = useState(false);
   const [showRating, setShowRating] = useState(false);
   const [productRatings, setProductRatings] = useState(product.ratings || []);
+  const [showReviews, setShowReviews] = useState(false);
 
   const handleRatingSubmit = (rating: any) => {
     const newRating = {
       quality: rating.quality,
       performance: rating.performance,
-      value: rating.value
+      value: rating.value,
+      comment: rating.comment,
+      date: new Date().toLocaleDateString()
     };
     setProductRatings([...productRatings, newRating]);
     setShowRating(false);
+  };
+
+  const calculateAverageRating = (ratings: any[]) => {
+    if (!ratings.length) return 0;
+    return ratings.reduce((acc, curr) => 
+      acc + (curr.quality + curr.performance + curr.value) / 3, 0
+    ) / ratings.length;
   };
 
   return (
@@ -82,6 +92,41 @@ export default function ProductCard({ product }: ProductCardProps) {
         {showRating && (
           <div className="mt-4">
             <ProductRating productId={product.id} onSubmit={handleRatingSubmit} />
+          </div>
+        )}
+        <Button 
+          variant="outline" 
+          size="sm" 
+          className="mt-2 w-full"
+          onClick={() => setShowReviews(!showReviews)}
+        >
+          {showReviews ? 'Hide Reviews' : `Show Reviews (${productRatings.length})`}
+        </Button>
+        {showReviews && (
+          <div className="mt-4 space-y-4">
+            {productRatings.map((rating, index) => (
+              <div key={index} className="border rounded p-3 space-y-2">
+                <div className="flex justify-between">
+                  <div className="text-sm font-medium">Rating Summary:</div>
+                  <div className="text-sm text-gray-500">{rating.date}</div>
+                </div>
+                <div className="grid grid-cols-3 gap-2 text-sm">
+                  <div>Quality: {rating.quality}★</div>
+                  <div>Performance: {rating.performance}★</div>
+                  <div>Value: {rating.value}★</div>
+                </div>
+                {rating.comment && (
+                  <div className="text-sm text-gray-600">
+                    "{rating.comment}"
+                  </div>
+                )}
+              </div>
+            ))}
+            {productRatings.length === 0 && (
+              <div className="text-center text-gray-500 text-sm">
+                No reviews yet
+              </div>
+            )}
           </div>
         )}
       </div>
