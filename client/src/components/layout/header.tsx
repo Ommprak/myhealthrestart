@@ -37,8 +37,8 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "nav-link font-medium text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-primary-light transition-colors",
-                  location === link.href && "active"
+                  "nav-link font-medium text-slate-700 dark:text-slate-200 hover:text-primary dark:hover:text-primary-light transition-all duration-300 transform hover:scale-105 relative after:content-[''] after:absolute after:w-0 after:h-0.5 after:bg-primary dark:after:bg-primary-light after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:after:w-full",
+                  location === link.href && "active after:w-full"
                 )}
               >
                 {link.label}
