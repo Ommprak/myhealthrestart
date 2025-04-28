@@ -42,7 +42,7 @@ export function ProductRating({ productId, onSubmit }: RatingProps) {
           key={star}
           onClick={() => handleRatingClick(category, star)}
           className={cn(
-            "text-2xl transition-colors",
+            "text-lg transition-colors",
             star <= ratings[category] ? "text-yellow-400" : "text-gray-300"
           )}
         >
@@ -53,31 +53,31 @@ export function ProductRating({ productId, onSubmit }: RatingProps) {
   );
 
   return (
-    <div className="space-y-4 p-4 bg-white dark:bg-slate-800 rounded-lg shadow">
-      <div className="space-y-3">
-        <div className="flex justify-between items-center">
-          <span className="font-medium">Quality</span>
+    <div className="space-y-2 p-3 bg-white dark:bg-slate-800 rounded-lg shadow text-sm">
+      <div className="space-y-2">
+        <div className="flex justify-between items-center gap-2">
+          <span className="font-medium text-xs">Quality</span>
           <RatingStars category="quality" />
         </div>
-        <div className="flex justify-between items-center">
-          <span className="font-medium">Performance</span>
+        <div className="flex justify-between items-center gap-2">
+          <span className="font-medium text-xs">Performance</span>
           <RatingStars category="performance" />
         </div>
-        <div className="flex justify-between items-center">
-          <span className="font-medium">Value for Money</span>
+        <div className="flex justify-between items-center gap-2">
+          <span className="font-medium text-xs">Value</span>
           <RatingStars category="value" />
         </div>
       </div>
       <Textarea
-        placeholder="Share your experience with this product..."
+        placeholder="Share your experience..."
         value={comment}
         onChange={(e) => setComment(e.target.value)}
-        className="w-full mt-4"
+        className="w-full mt-2 text-xs h-20 resize-none"
       />
       <Button 
         onClick={handleSubmit}
         disabled={!ratings.quality || !ratings.performance || !ratings.value}
-        className="w-full mt-4"
+        className="w-full mt-2 text-xs py-1"
       >
         Submit Review
       </Button>
