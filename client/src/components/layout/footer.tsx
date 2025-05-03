@@ -136,7 +136,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start">
                 <i className="ri-mail-line text-primary-light mt-1 mr-3"></i>
-                <span className="text-slate-300">myhealthrestart@gmail.com</span>
+                <a href="mailto:myhealthrestart@gmail.com" className="text-slate-300 hover:text-primary-light transition-colors">myhealthrestart@gmail.com</a>
               </li>
               <li className="flex items-start">
                 <i className="ri-time-line text-primary-light mt-1 mr-3"></i>
