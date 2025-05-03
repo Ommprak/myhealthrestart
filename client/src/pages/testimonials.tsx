@@ -21,34 +21,7 @@ export default function Testimonials() {
         accentWord="Customers"
       />
 
-      {/* Image Testimonials Section */}
-      <section className="py-16 bg-white dark:bg-slate-800">
-        <div className="container mx-auto px-4">
-          <h2 className="font-heading font-bold text-2xl text-slate-800 dark:text-white mb-8 text-center">
-            Photo Section
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {displayedTestimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                <div className="flex flex-col items-center">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name} 
-                    className="w-48 h-48 rounded-full object-cover border-4 border-white dark:border-slate-600"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-          {visibleTestimonials < testimonials.length && (
-            <div className="text-center mt-12">
-              <Button onClick={loadMoreTestimonials}>
-                Load More Photos
-              </Button>
-            </div>
-          )}
-        </div>
-      </section>
+      
 
       {/* Video Testimonials Section */}
       <section className="py-16 bg-slate-50 dark:bg-slate-900">
