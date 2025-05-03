@@ -36,48 +36,54 @@ export default function ContactPopup() {
               <X className="h-5 w-5" />
             </button>
             
-            <h2 className="text-2xl font-bold mb-4 text-slate-900 dark:text-white">Contact Us</h2>
+            <h2 className="text-2xl font-bold mb-6 text-slate-900 dark:text-white text-center">Contact Us</h2>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium mb-1">Name</label>
-                <Input
-                  required
-                  value={formData.name}
-                  onChange={e => setFormData(prev => ({ ...prev, name: e.target.value }))}
-                />
+            <div className="space-y-6">
+              <a 
+                href="https://maps.app.goo.gl/rpjCWzQWcWuGe6GBA"
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="flex items-start p-4 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group"
+              >
+                <i className="ri-map-pin-line text-primary-light text-xl mt-1 mr-4"></i>
+                <div>
+                  <h3 className="font-medium text-slate-900 dark:text-white mb-1 group-hover:text-primary-light transition-colors">Location</h3>
+                  <p className="text-slate-600 dark:text-slate-300">
+                    At Gatebazar (Lochapoda road, near Dhuba street), Berhampur, Odisha
+                  </p>
+                </div>
+              </a>
+
+              <a 
+                href="tel:+919776932777"
+                className="flex items-start p-4 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group"
+              >
+                <i className="ri-phone-line text-primary-light text-xl mt-1 mr-4"></i>
+                <div>
+                  <h3 className="font-medium text-slate-900 dark:text-white mb-1 group-hover:text-primary-light transition-colors">Phone</h3>
+                  <p className="text-slate-600 dark:text-slate-300">+91 9776932777</p>
+                </div>
+              </a>
+
+              <a 
+                href="mailto:myhealthrestart@gmail.com"
+                className="flex items-start p-4 rounded-lg bg-slate-50 dark:bg-slate-700/50 hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group"
+              >
+                <i className="ri-mail-line text-primary-light text-xl mt-1 mr-4"></i>
+                <div>
+                  <h3 className="font-medium text-slate-900 dark:text-white mb-1 group-hover:text-primary-light transition-colors">Email</h3>
+                  <p className="text-slate-600 dark:text-slate-300">myhealthrestart@gmail.com</p>
+                </div>
+              </a>
+
+              <div className="flex items-start p-4 rounded-lg bg-slate-50 dark:bg-slate-700/50">
+                <i className="ri-time-line text-primary-light text-xl mt-1 mr-4"></i>
+                <div>
+                  <h3 className="font-medium text-slate-900 dark:text-white mb-1">Hours</h3>
+                  <p className="text-slate-600 dark:text-slate-300">24/7</p>
+                </div>
               </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">Place</label>
-                <Input
-                  required
-                  value={formData.place}
-                  onChange={e => setFormData(prev => ({ ...prev, place: e.target.value }))}
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">Email</label>
-                <Input
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={e => setFormData(prev => ({ ...prev, email: e.target.value }))}
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium mb-1">Query/Topic</label>
-                <Textarea
-                  required
-                  value={formData.query}
-                  onChange={e => setFormData(prev => ({ ...prev, query: e.target.value }))}
-                />
-              </div>
-              
-              <Button type="submit" className="w-full">Submit</Button>
-            </form>
+            </div>
           </div>
         </div>
       ) : (
