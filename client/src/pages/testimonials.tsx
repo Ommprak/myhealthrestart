@@ -34,17 +34,8 @@ export default function Testimonials() {
                   <img 
                     src={testimonial.image} 
                     alt={testimonial.name} 
-                    className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white dark:border-slate-600"
+                    className="w-48 h-48 rounded-full object-cover border-4 border-white dark:border-slate-600"
                   />
-                  <h3 className="font-heading font-semibold text-slate-800 dark:text-white text-lg mb-1">
-                    {testimonial.name}
-                  </h3>
-                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
-                    {testimonial.title}
-                  </p>
-                  <p className="text-slate-600 dark:text-slate-300 text-center">
-                    "{testimonial.content}"
-                  </p>
                 </div>
               </div>
             ))}
