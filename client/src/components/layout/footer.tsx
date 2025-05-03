@@ -126,9 +126,14 @@ export default function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <i className="ri-map-pin-line text-primary-light mt-1 mr-3"></i>
-                <span className="text-slate-300">
-                  At Gatebazar (Lochapoda road, near Dhuba street), Berhampur, Odisha<br />
-                </span>
+                <a 
+                  href="https://www.google.com/maps/search/?api=1&query=Gatebazar+Lochapoda+road+near+Dhuba+street+Berhampur+Odisha" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-slate-300 hover:text-primary-light transition-colors"
+                >
+                  At Gatebazar (Lochapoda road, near Dhuba street), Berhampur, Odisha
+                </a>
               </li>
               <li className="flex items-start">
                 <i className="ri-phone-line text-primary-light mt-1 mr-3"></i>
