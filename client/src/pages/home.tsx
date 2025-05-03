@@ -19,11 +19,17 @@ export default function Home() {
       {/* Hero Section */}
       <section className="hero-section relative min-h-screen flex items-center justify-center">
         <div className="absolute inset-0">
-          <img 
-            src="https://i.im.ge/2025/04/27/vUO3Uq.WhatsApp-Image-2025-04-27-at-12-16-24-AM.jpeg"
-            alt="Healthcare background" 
-            className="w-full h-full object-cover object-center md:object-center"
-          />
+          <picture> 
+            <source 
+              media="(max-width: 768px)" 
+              srcSet="https://res.cloudinary.com/df8blxifj/image/upload/v1746210621/lwhujeqktzt67ivvgssp.jpg"
+            />
+            <img 
+              src="https://res.cloudinary.com/df8blxifj/image/upload/v1746208786/fhxbdxoaxhb422gehecq.jpg"
+              alt="Healthcare background" 
+              className="w-full h-full object-cover"
+            />
+          </picture>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="container mx-auto px-4 relative z-10">
@@ -50,9 +56,9 @@ export default function Home() {
       <section className="py-16 bg-slate-50 dark:bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <span className="text-sm font-medium text-primary dark:text-primary-light uppercase tracking-wider">Company Updates</span>
+            <span className="text-sm font-medium text-primary dark:text-primary-light uppercase tracking-wider">Latest Update</span>
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mt-2">
-              Latest Announcements
+              Announcement
             </h2>
           </div>
           <div className="max-w-4xl mx-auto h-[80vh] overflow-y-auto scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-700">
