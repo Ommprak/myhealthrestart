@@ -127,7 +127,7 @@ export default function Footer() {
               <li className="flex items-start">
                 <i className="ri-map-pin-line text-primary-light mt-1 mr-3"></i>
                 <a 
-                  href="https://maps.app.goo.gl/jLZuL38gbMf7Bt3L8" 
+                  href="https://maps.app.goo.gl/rpjCWzQWcWuGe6GBA" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-slate-300 hover:text-primary-light transition-colors"
