@@ -25,17 +25,34 @@ export default function Testimonials() {
       <section className="py-16 bg-white dark:bg-slate-800">
         <div className="container mx-auto px-4">
           <h2 className="font-heading font-bold text-2xl text-slate-800 dark:text-white mb-8 text-center">
-            Photo Testimonials
+            Photo Section
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayedTestimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+              <div key={testimonial.id} className="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                <div className="flex flex-col items-center">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name} 
+                    className="w-32 h-32 rounded-full object-cover mb-4 border-4 border-white dark:border-slate-600"
+                  />
+                  <h3 className="font-heading font-semibold text-slate-800 dark:text-white text-lg mb-1">
+                    {testimonial.name}
+                  </h3>
+                  <p className="text-slate-500 dark:text-slate-400 text-sm mb-4">
+                    {testimonial.title}
+                  </p>
+                  <p className="text-slate-600 dark:text-slate-300 text-center">
+                    "{testimonial.content}"
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
           {visibleTestimonials < testimonials.length && (
             <div className="text-center mt-12">
               <Button onClick={loadMoreTestimonials}>
-                Load More Reviews
+                Load More Photos
               </Button>
             </div>
           )}
