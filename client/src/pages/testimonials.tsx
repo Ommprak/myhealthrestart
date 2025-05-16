@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import PageHeader from "@/components/layout/page-header";
@@ -27,7 +26,7 @@ export default function Testimonials() {
           <h2 className="font-heading font-bold text-2xl text-slate-800 dark:text-white mb-8 text-center">
             Photo Testimonials
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="aspect-square relative group">
                 <img 

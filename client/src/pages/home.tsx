@@ -141,32 +141,18 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-semibold mb-2">Trusted by leaders</h2>
+            <p className="text-slate-600 dark:text-slate-300">from various industries</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
             {featuredTestimonials.map((testimonial) => (
-              <div key={testimonial.id} className="bg-slate-50 dark:bg-slate-700 p-6 rounded-xl shadow-md">
-                <div className="flex flex-col items-center text-center">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-slate-600 shadow-md mb-4"
-                  />
-                  <div className="text-yellow-400 flex mb-3">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <i key={i} className="ri-star-fill"></i>
-                    ))}
-                  </div>
-                  <p className="text-slate-600 dark:text-slate-300 italic mb-4">
-                    "{testimonial.content}"
-                  </p>
-                  <div>
-                    <p className="font-heading font-semibold text-slate-800 dark:text-white">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-slate-500 dark:text-slate-400">
-                      {testimonial.title}
-                    </p>
-                  </div>
-                </div>
+              <div key={testimonial.id} className="w-24 h-24 rounded-lg overflow-hidden transform hover:scale-105 transition-transform">
+                <img 
+                  src={testimonial.image} 
+                  alt={testimonial.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
             ))}
           </div>

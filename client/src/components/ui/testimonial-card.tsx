@@ -6,8 +6,9 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <div className="bg-slate-50 dark:bg-slate-700 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-      <div className="flex justify-between items-start mb-4">
+    <div className="bg-violet-100 p-6 rounded-xl shadow-md">
+      <div className="flex flex-col">
+        <h3 className="text-xl font-semibold text-violet-800 mb-4">Design Feedback</h3>
         <div className="text-yellow-400 flex">
           {Array.from({ length: 5 }).map((_, i) => (
             <i 
