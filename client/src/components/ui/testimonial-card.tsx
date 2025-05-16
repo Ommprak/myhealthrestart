@@ -6,41 +6,25 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <div className="bg-violet-100 p-6 rounded-xl shadow-md">
-      <div className="flex flex-col">
-        <h3 className="text-xl font-semibold text-violet-800 mb-4">Design Feedback</h3>
-        <div className="text-yellow-400 flex">
-          {Array.from({ length: 5 }).map((_, i) => (
-            <i 
-              key={i} 
-              className={
-                i < Math.floor(testimonial.rating) 
-                  ? "ri-star-fill" 
-                  : i < testimonial.rating 
-                    ? "ri-star-half-fill" 
-                    : "ri-star-line"
-              }
-            ></i>
-          ))}
-        </div>
-        <div className="text-primary dark:text-primary-light text-xl">
-          <i className="ri-double-quotes-l"></i>
-        </div>
-      </div>
-      <p className="text-slate-600 dark:text-slate-300 italic mb-6">
-        "{testimonial.content}"
-      </p>
-      <div className="flex items-center">
+    <div className="bg-white p-8 rounded-3xl shadow-lg flex gap-8 items-center">
+      <div className="relative">
+        <div className="absolute -z-10 bg-gray-200 rounded-full w-[280px] h-[280px] -top-4 -left-4"></div>
         <img 
           src={testimonial.image} 
           alt={testimonial.name} 
-          className="w-12 h-12 rounded-full object-cover mr-4"
+          className="w-[280px] h-[280px] rounded-full object-cover"
         />
+      </div>
+      <div className="flex-1">
+        <div className="text-navy-900 text-6xl mb-6">"</div>
+        <p className="text-slate-800 text-lg mb-8">
+          {testimonial.content}
+        </p>
         <div>
-          <p className="font-heading font-semibold text-slate-800 dark:text-white">
+          <p className="font-heading font-bold text-2xl text-navy-900">
             {testimonial.name}
           </p>
-          <p className="text-slate-500 dark:text-slate-400 text-sm">
+          <p className="text-red-500 text-lg">
             {testimonial.title}
           </p>
         </div>

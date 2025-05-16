@@ -21,12 +21,12 @@ export default function Testimonials() {
       />
 
       {/* Photo Testimonials Section */}
-      <section className="py-16 bg-white dark:bg-slate-800">
+      <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
-          <h2 className="font-heading font-bold text-2xl text-slate-800 dark:text-white mb-8 text-center">
-            Photo Testimonials
+          <h2 className="font-heading font-bold text-4xl text-slate-800 mb-12 text-center">
+            What Our Clients Say
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
+          <div className="space-y-8">
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="aspect-square relative group">
                 <img 
