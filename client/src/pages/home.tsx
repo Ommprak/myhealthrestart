@@ -35,7 +35,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
             <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6" style={{ animationDelay: '1s' }}>
-              <span className="text-green-300">Phyto</span> <span className="text-red-300">Science</span><br />
+              <span className="text-green-300">Phyto</span> <span className="text-red-400">Science</span><br />
               <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 block">Presents</span>
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8">
