@@ -22,10 +22,10 @@ export default function Home() {
           <picture> 
             <source 
               media="(max-width: 768px)" 
-              srcSet="https://res.cloudinary.com/df8blxifj/image/upload/v1746210621/lwhujeqktzt67ivvgssp.jpg"
+              srcSet="https://res.cloudinary.com/df8blxifj/image/upload/v1747385280/wjb9lawd6fydken7q6ir.jpg"
             />
             <img 
-              src="https://res.cloudinary.com/df8blxifj/image/upload/v1746208786/fhxbdxoaxhb422gehecq.jpg"
+              src="https://res.cloudinary.com/df8blxifj/image/upload/v1747384711/rgsgntteon7wqevu8s0t.jpg"
               alt="Healthcare background" 
               className="w-full h-full object-cover"
             />
@@ -34,7 +34,7 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6" style={{ animationDelay: '1s' }}>
+            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-red-400 mb-6" style={{ animationDelay: '1s' }}>
               Phyto Science<br />
               <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 block">Presents</span>
             </h1>
