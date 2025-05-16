@@ -33,10 +33,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             {product.description}
           </p>
 
-          {/* Price */}
-          <div className="text-base font-bold text-green-600 dark:text-green-400">
-            ₹{product.price.toFixed(2)}
-          </div>
+          
 
           {/* Rating and Sold Quantity */}
           <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300">

@@ -10,7 +10,7 @@ import ContactPopup from "@/components/ui/contact-popup";
 
 export default function Home() {
   const featuredProducts = products.slice(0, 3);
-  const featuredTestimonial = testimonials[0];
+  const featuredTestimonials = testimonials.slice(0, 3);
 
 
   return (
@@ -34,8 +34,8 @@ export default function Home() {
         </div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl">
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-red-400 mb-6" style={{ animationDelay: '1s' }}>
-              Phyto Science<br />
+            <h1 className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6" style={{ animationDelay: '1s' }}>
+              <span className="text-green-300">Phyto</span> <span className="text-red-300">Science</span><br />
               <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2 block">Presents</span>
             </h1>
             <p className="text-xl sm:text-2xl text-white/90 mb-8">
@@ -141,34 +141,34 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-slate-50 dark:bg-slate-700 p-8 rounded-xl shadow-md">
-            <div className="flex flex-col md:flex-row items-center">
-              <div className="mb-6 md:mb-0 md:mr-8">
-                <img 
-                  src={featuredTestimonial.image} 
-                  alt={featuredTestimonial.name}
-                  className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-slate-600 shadow-md"
-                />
-              </div>
-              <div>
-                <div className="text-yellow-400 flex mb-3">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <i key={i} className="ri-star-fill"></i>
-                  ))}
-                </div>
-                <p className="text-slate-600 dark:text-slate-300 italic mb-4 text-lg">
-                  "{featuredTestimonial.content}"
-                </p>
-                <div>
-                  <p className="font-heading font-semibold text-slate-800 dark:text-white">
-                    {featuredTestimonial.name}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {featuredTestimonials.map((testimonial) => (
+              <div key={testimonial.id} className="bg-slate-50 dark:bg-slate-700 p-6 rounded-xl shadow-md">
+                <div className="flex flex-col items-center text-center">
+                  <img 
+                    src={testimonial.image} 
+                    alt={testimonial.name}
+                    className="w-24 h-24 rounded-full object-cover border-4 border-white dark:border-slate-600 shadow-md mb-4"
+                  />
+                  <div className="text-yellow-400 flex mb-3">
+                    {Array.from({ length: 5 }).map((_, i) => (
+                      <i key={i} className="ri-star-fill"></i>
+                    ))}
+                  </div>
+                  <p className="text-slate-600 dark:text-slate-300 italic mb-4">
+                    "{testimonial.content}"
                   </p>
-                  <p className="text-slate-500 dark:text-slate-400">
-                    {featuredTestimonial.title}
-                  </p>
+                  <div>
+                    <p className="font-heading font-semibold text-slate-800 dark:text-white">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-slate-500 dark:text-slate-400">
+                      {testimonial.title}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
 
           <div className="text-center mt-8">
