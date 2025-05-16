@@ -14,7 +14,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Product Image */}
         <div className="relative w-full pb-[100%]">
           <img
-            src={product.image}
+            src={product.images[0]} // show first image by default
             alt={product.name}
             className="absolute inset-0 h-full w-full object-contain cursor-pointer rounded-lg hover:scale-105 transition-transform"
             onClick={() => setIsImageOpen(true)}
@@ -23,19 +23,12 @@ export default function ProductCard({ product }: ProductCardProps) {
 
         {/* Product Details */}
         <div className="mt-4 flex flex-col gap-2">
-          {/* Product Name */}
           <h3 className="text-sm font-semibold text-gray-800 dark:text-gray-200 truncate">
             {product.name}
           </h3>
-
-          {/* Product Description */}
           <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2">
             {product.description}
           </p>
-
-          
-
-          {/* Rating and Sold Quantity */}
           <div className="flex items-center justify-between text-sm text-gray-600 dark:text-gray-300">
             <div className="flex items-center">
               {[...Array(5)].map((_, i) => (
@@ -57,11 +50,19 @@ export default function ProductCard({ product }: ProductCardProps) {
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm p-4"
           onClick={() => setIsImageOpen(false)}
         >
-          <img
-            src={product.image}
-            alt={product.name}
-            className="max-h-full max-w-full object-contain"
-          />
+          <div
+            className="flex gap-4 overflow-auto max-w-full max-h-full"
+            onClick={(e) => e.stopPropagation()} // prevent closing when clicking on image area
+          >
+            {product.images.map((img, idx) => (
+              <img
+                key={idx}
+                src={img}
+                alt={`${product.name} ${idx + 1}`}
+                className="max-h-[80vh] max-w-[90vw] object-contain rounded"
+              />
+            ))}
+          </div>
         </div>
       )}
     </>

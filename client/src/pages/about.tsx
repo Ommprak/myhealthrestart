@@ -1,10 +1,40 @@
+"use client";
 import PageHeader from "@/components/layout/page-header";
+import { useState } from "react";
 import FeatureCard from "@/components/ui/feature-card";
 import { values } from "@/data/features";
 import { team } from "@/data/team";
 import { Button } from "@/components/ui/button";
 
 export default function About() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "Product Information",
+    message: "",
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    const whatsappNumber = "919776932777"; // Country code + number
+    const message = `Hello My Health Book, I would like to inquire about the following:
+
+   My Name: ${formData.name}
+   My Email: ${formData.email}
+   Subject: ${formData.subject}
+   Message: ${formData.message}`;
+
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+    window.open(whatsappURL, "_blank");
+  };
   return (
     <div>
       <PageHeader 
@@ -172,7 +202,7 @@ export default function About() {
                 <h3 className="font-heading font-semibold text-xl text-slate-800 dark:text-white mb-6">
                   Send us a Message
                 </h3>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="mb-4">
                     <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                       Name
@@ -180,9 +210,13 @@ export default function About() {
                     <input 
                       type="text" 
                       id="name" 
+                      value={formData.name}
+                      onChange={handleChange}
                       className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                      required
                     />
                   </div>
+
                   <div className="mb-4">
                     <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                       Email
@@ -190,15 +224,21 @@ export default function About() {
                     <input 
                       type="email" 
                       id="email" 
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                      required
                     />
                   </div>
+
                   <div className="mb-4">
                     <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                       Subject
                     </label>
                     <select 
                       id="subject" 
+                      value={formData.subject}
+                      onChange={handleChange}
                       className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
                     >
                       <option>Product Information</option>
@@ -207,6 +247,7 @@ export default function About() {
                       <option>Other</option>
                     </select>
                   </div>
+
                   <div className="mb-6">
                     <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">
                       Message
@@ -214,11 +255,15 @@ export default function About() {
                     <textarea 
                       id="message" 
                       rows={4} 
+                      value={formData.message}
+                      onChange={handleChange}
                       className="w-full px-4 py-2 border border-slate-300 dark:border-slate-600 rounded-md bg-white dark:bg-slate-700 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-light"
+                      required
                     ></textarea>
                   </div>
+
                   <Button type="submit" className="w-full">
-                    Send Message
+                    Send Message via WhatsApp
                   </Button>
                 </form>
               </div>

@@ -21,25 +21,11 @@ export default function Testimonials() {
       />
 
       {/* Photo Testimonials Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <h2 className="font-heading font-bold text-4xl text-slate-800 mb-12 text-center">
-            What Our Clients Say
-          </h2>
-          <div className="space-y-8">
-            {testimonials.map((testimonial) => (
-              <div key={testimonial.id} className="aspect-square relative group">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-full h-full object-cover rounded-lg shadow-md transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-heading text-sm">{testimonial.name}</span>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="px-4 md:px-12 py-16 bg-[#020617]">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {testimonials.map((testimonial) => (
+            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+          ))}
         </div>
       </section>
 

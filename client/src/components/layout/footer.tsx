@@ -154,7 +154,7 @@ export default function Footer() {
         <div className="border-t border-slate-700 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-slate-400 mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} My Health Restart. All rights reserved.
+              &copy; {new Date().getFullYear()} My Health Book. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-slate-400 hover:text-primary-light transition-colors text-sm">

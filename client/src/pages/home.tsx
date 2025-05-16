@@ -85,13 +85,13 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 bg-white dark:bg-slate-800 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800 relative overflow-hidden">
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
+            <h2 className="font-heading font-bold text-4xl text-white mb-4">
               Why Choose My Health Restart?
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+            <p className="text-slate-400 max-w-3xl mx-auto text-lg">
               We are committed to providing the highest quality healthcare products with exceptional service.
             </p>
           </div>
@@ -108,6 +108,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Featured Products */}
       <section className="py-16 bg-slate-50 dark:bg-slate-900">
@@ -130,40 +131,67 @@ export default function Home() {
       </section>
 
       {/* Testimonial Preview */}
-      <section className="py-16 bg-white dark:bg-slate-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white mb-4">
-              What Our Customers Say
-            </h2>
-            <p className="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
-              Thousands of healthcare professionals and patients trust our products every day.
+      <section className="py-20 bg-gradient-to-b from-[#0f172a] to-[#1e293b] text-white">
+        <div className="container mx-auto px-6">
+          {/* Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold tracking-tight mb-4">What People Are Saying</h2>
+            <p className="text-slate-400 max-w-xl mx-auto text-lg">
+              Hear from real people who love what we do.
             </p>
           </div>
 
-          <div className="text-center mb-8">
-            <h2 className="text-2xl font-semibold mb-2">Trusted by leaders</h2>
-            <p className="text-slate-600 dark:text-slate-300">from various industries</p>
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 max-w-6xl mx-auto">
-            {featuredTestimonials.map((testimonial) => (
-              <div key={testimonial.id} className="w-24 h-24 rounded-lg overflow-hidden transform hover:scale-105 transition-transform">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-full h-full object-cover"
-                />
+          {/* Testimonials */}
+          <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+            {featuredTestimonials.slice(0, 3).map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="relative bg-[#1e293b] p-8 rounded-2xl shadow-xl hover:shadow-blue-500/20 transition-shadow"
+              >
+                <div className="absolute top-4 right-4 text-blue-500 text-3xl opacity-30">
+                  &ldquo;
+                </div>
+                <div className="flex items-center gap-4 mb-4">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-14 h-14 rounded-full border-2 border-blue-500 object-cover"
+                  />
+                  <div>
+                    <h4 className="text-lg font-semibold">{testimonial.name}</h4>
+                    <span className="text-sm text-blue-400">{testimonial.title}</span>
+                  </div>
+                </div>
+                <p className="text-slate-300 text-sm leading-relaxed">
+                  {testimonial.content.length > 160
+                    ? testimonial.content.slice(0, 160) + '...'
+                    : testimonial.content}
+                </p>
               </div>
             ))}
           </div>
 
-          <div className="text-center mt-8">
-            <Link href="/testimonials" className="inline-flex items-center text-primary dark:text-primary-light font-medium hover:underline">
-              Read More Testimonials <i className="ri-arrow-right-line ml-1"></i>
+          {/* Read More Button */}
+          <div className="text-center mt-12">
+            <Link
+              href="/testimonials"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-colors duration-300"
+            >
+              Read More Testimonials
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
             </Link>
           </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
       <section className="py-16 bg-primary dark:bg-primary-dark">

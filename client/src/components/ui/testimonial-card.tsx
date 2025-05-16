@@ -1,4 +1,5 @@
 import { Testimonial } from "@/data/testimonials";
+import { Quote } from "lucide-react";
 
 interface TestimonialCardProps {
   testimonial: Testimonial;
@@ -6,28 +7,25 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ testimonial }: TestimonialCardProps) {
   return (
-    <div className="bg-white p-8 rounded-3xl shadow-lg flex gap-8 items-center">
-      <div className="relative">
-        <div className="absolute -z-10 bg-gray-200 rounded-full w-[280px] h-[280px] -top-4 -left-4"></div>
-        <img 
-          src={testimonial.image} 
-          alt={testimonial.name} 
-          className="w-[280px] h-[280px] rounded-full object-cover"
+    <div className="flex flex-col md:flex-row bg-[#0f172a] p-6 md:p-8 rounded-3xl shadow-xl items-center gap-8 w-full border border-blue-900 hover:shadow-blue-500/20 transition-shadow duration-300">
+
+      {/* Left: Circular Image */}
+      <div className="flex-shrink-0">
+        <img
+          src={testimonial.image}
+          alt={testimonial.name}
+          className="w-44 h-44 md:w-52 md:h-52 rounded-full object-cover border-4 border-blue-600 shadow-md"
         />
       </div>
-      <div className="flex-1">
-        <div className="text-navy-900 text-6xl mb-6">"</div>
-        <p className="text-slate-800 text-lg mb-8">
+
+      {/* Right: Text */}
+      <div className="flex-1 text-left">
+        <Quote className="text-blue-400 w-8 h-8 mb-4" />
+        <p className="text-gray-300 text-base leading-relaxed mb-4">
           {testimonial.content}
         </p>
-        <div>
-          <p className="font-heading font-bold text-2xl text-navy-900">
-            {testimonial.name}
-          </p>
-          <p className="text-red-500 text-lg">
-            {testimonial.title}
-          </p>
-        </div>
+        <p className="text-white text-lg font-bold">{testimonial.name}</p>
+        <p className="text-blue-400 text-sm font-medium">{testimonial.title}</p>
       </div>
     </div>
   );
