@@ -115,7 +115,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center mb-12">
             <h2 className="font-heading font-bold text-3xl text-slate-800 dark:text-white">
-              Featured Products
+              Our Products
             </h2>
             <Link href="/products" className="text-primary dark:text-primary-light font-medium flex items-center hover:underline">
               View All <i className="ri-arrow-right-line ml-1"></i>

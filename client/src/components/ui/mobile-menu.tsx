@@ -35,7 +35,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
 
       {isOpen && (
         <div className="fixed left-0 right-0 top-[calc(100%+1px)] bottom-0 bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 z-50 animate-in slide-in-from-top duration-200">
-          <div className="container mx-auto px-4 py-4 space-y-4">
+          <div className="container mx-auto px-4 py-4 space-y-4 bg-slate-600">
             {links.map((link) => (
               <Link
                 key={link.href}

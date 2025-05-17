@@ -38,12 +38,7 @@ export default function Testimonials() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
-                <iframe 
-                  src="https://www.youtube.com/embed/sample1" 
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                ></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7Dgn4lSDUt0?si=toQdB2-z6d6joKjV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
@@ -56,12 +51,111 @@ export default function Testimonials() {
             </div>
             <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
               <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
-                <iframe 
-                  src="https://www.youtube.com/embed/sample2" 
-                  className="w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                ></iframe>
+                <iframe width="560" height="315" src="https://youtube.com/embed/ihSHB8NelrY?si=FkRBKo5koeOlfjM3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Dr. Sarah Johnson's Experience
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Chief Medical Officer shares her experience with our products
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://youtube.com/embed/sGsw4mU0SzY?si=0OL0pwuKv7eKrtGi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Dr. Sarah Johnson's Experience
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Chief Medical Officer shares her experience with our products
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://youtube.com/embed/RG-PFLQkwy0?si=DZGAqoqrPpXK6HXd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Dr. Sarah Johnson's Experience
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Chief Medical Officer shares her experience with our products
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://youtube.com/embed/hcR644mXMPs?si=pWKwKLrdUsxMVYHn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Manoj Kumar Behera
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Product Lunching day
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://youtube.com/embed/jp9Nd89zSNo?si=ZUTUU1LivcndPGbT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Manoj Kumar Behera
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Product for reducing fat and lowering cholesterol levels, which are significant health benefits.
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1BJIEdHTzj0?si=E7oDjmQDRqKns-5G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Patient Success Story
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Rebecca Martin shares her journey to better health
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/69wRpsYlAA0?si=WtvcqXT3GlHIpNhJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Patient Success Story
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Rebecca Martin shares her journey to better health
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/oanOP9s0G9Y?si=_GKb2rVFwZoz5I-G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              </div>
+              <div className="p-6">
+                <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
+                  Patient Success Story
+                </h3>
+                <p className="text-slate-600 dark:text-slate-300">
+                  Rebecca Martin shares her journey to better health
+                </p>
+              </div>
+            </div>
+            <div className="bg-white dark:bg-slate-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="aspect-w-16 aspect-h-9 bg-slate-200 dark:bg-slate-700">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/pIlr28BNUo0?si=t6ky_SnYh2hFVdQZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
