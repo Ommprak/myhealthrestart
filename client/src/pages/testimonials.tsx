@@ -42,10 +42,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Dr. Sarah Johnson's Experience
+                  Member
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Chief Medical Officer shares her experience with our products
+                  All about our products and their benefits to health.
                 </p>
               </div>
             </div>
@@ -55,10 +55,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Dr. Sarah Johnson's Experience
+                  Customer, Berhampur, Gamjam
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Chief Medical Officer shares her experience with our products
+                  Returned to normal life after using our products.
                 </p>
               </div>
             </div>
@@ -68,10 +68,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Dr. Sarah Johnson's Experience
+                  Members
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Chief Medical Officer shares her experience with our products
+                  Our trusted members share their experiences with our products
                 </p>
               </div>
             </div>
@@ -81,10 +81,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Dr. Sarah Johnson's Experience
+                 Customer, Asika, Gamjam
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Chief Medical Officer shares her experience with our products
+                  Used for his mother to cure liver and kidney disease
                 </p>
               </div>
             </div>
@@ -120,10 +120,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Patient Success Story
+                  Industry Visit
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Rebecca Martin shares her journey to better health
+                  How stem cells are used to treat various diseases and how they extract from
                 </p>
               </div>
             </div>
@@ -133,10 +133,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Patient Success Story
+                  Crystal Cell
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Rebecca Martin shares her journey to better health
+                  All about Crystal Cell and its benefits to health.  Ingredients and how it is made.
                 </p>
               </div>
             </div>
@@ -146,10 +146,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Patient Success Story
+                  Doctor's Advice
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Rebecca Martin shares her journey to better health
+                  Doctor shares his experience with our products and their benefits to Children health.
                 </p>
               </div>
             </div>
@@ -159,10 +159,10 @@ export default function Testimonials() {
               </div>
               <div className="p-6">
                 <h3 className="font-heading font-semibold text-lg text-slate-800 dark:text-white mb-2">
-                  Patient Success Story
+                  Stem Cell
                 </h3>
                 <p className="text-slate-600 dark:text-slate-300">
-                  Rebecca Martin shares her journey to better health
+                  All about stem cells and how it is used to treat various critical diseases.
                 </p>
               </div>
             </div>
