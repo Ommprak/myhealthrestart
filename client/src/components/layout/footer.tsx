@@ -19,6 +19,15 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a 
+                href="https://www.youtube.com/channel/UC8LYXGXq5ZG9MUmxaTM7cQA"
+                target="_blank"
+                rel="noopener noreferrer" 
+                className="text-slate-300 hover:text-primary-light transition-colors"
+                aria-label="YouTube"
+              >
+                <i className="ri-youtube-fill text-xl"></i>
+              </a>
+              <a 
                 href="#" 
                 className="text-slate-300 hover:text-primary-light transition-colors"
                 aria-label="Facebook"
