@@ -89,7 +89,7 @@ export default function Home() {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-4xl text-white mb-4">
-              Why Choose My Health Restart?
+              Why Choose My Health Book?
             </h2>
             <p className="text-slate-400 max-w-3xl mx-auto text-lg">
               We are committed to providing the highest quality healthcare products with exceptional service.
