@@ -21,7 +21,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <img 
-              src="/assets/Professional-Logo-for-My-Health-Book-with-Medical-Icon-removebg-preview.png" 
+              src="/assets/Professional_Logo_for__My_Health_Book__with_Medical_Icon-removebg-preview.png" 
               alt="MyHealth Book Logo" 
               className="h-48 w-auto"
             />
