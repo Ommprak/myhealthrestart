@@ -23,7 +23,7 @@ export default function Header() {
             <img 
               src="/assets/Professional_Logo_for__My_Health_Book__with_Medical_Icon-removebg-preview.png" 
               alt="MyHealth Book Logo" 
-              className="h-32 w-auto"
+              className="h-40 w-auto"
             />
           </Link>
 
