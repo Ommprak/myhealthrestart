@@ -7,7 +7,7 @@ interface PageHeaderProps {
 export default function PageHeader({ title, subtitle, accentWord }: PageHeaderProps) {
   const renderTitle = () => {
     if (!accentWord) return title;
-    
+
     const parts = title.split(accentWord);
     return (
       <>
